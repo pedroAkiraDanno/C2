@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1649557304 source:d:\users\pedro\desktop\quick_sort\quick_sort.c
+	<stdio.h>
+	<stdbool.h>
+	<time.h>
+
+1649613905 source:d:\users\pedro\desktop\p\database\postgresql\principal\postgresql\auto\study\c\quick_sort\quick_sort.c
+	<stdio.h>
+	<stdbool.h>
+	<time.h>
+

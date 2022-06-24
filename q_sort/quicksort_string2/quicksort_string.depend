@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1650560499 source:d:\users\pedro\desktop\p\database\postgresql\principal\postgresql\auto\study\c\quicksort_string\quicksort_string.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<time.h>
+	<stdbool.h>
+

@@ -1,0 +1,118 @@
+1
+{1, 7, 5, 4, 0, 9, 6*}; BEGIN
+{1, 7, 5, 4, 0, 9, 6};
+{1, 5, 4, 0, 7, 9, 6};
+{1, 5, 4, 0, 6, 9, 7};
+
+
+infos
+    call stack 
+    #0 ??	quickSort (array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:60)
+    #1 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+
+i = show the less value, to change, i +1 = pivot +1
+
+
+
+2
+{1, 5, 4, 0*, 6, 9, 7};
+{0, 5, 4, 1, 6, 9, 7};
+
+
+infos
+#0 ??	partition (array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:26)
+#1 0x40168c	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:60)
+#2 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#3 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+#0 ??	quickSort (array=0x61fe00, low=0, high=-1) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:55)
+#1 0x4016a6	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#2 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#3 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+#0 ??	quickSort (array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#1 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#2 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+
+3
+{0, 5, 4, 1*, 6, 9, 7};
+{0, 1, 4, 5, 6, 9, 7};
+
+info 
+#0 ??	partition (array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:26)
+#1 0x40168c	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:60)
+#2 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#4 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+#0 ??	quickSort (array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#1 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#2 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#3 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+#0 ??	quickSort (array=0x61fe00, low=1, high=0) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:68)
+#1 0x4016a6	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#2 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#4 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+#0 ??	quickSort (array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#1 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#2 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#3 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+#0 ??	quickSort (array=0x61fe00, low=2, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:55)
+#1 0x4016bd	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#2 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#4 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+4
+{0, 1, 4, 5*, 6, 9, 7};
+
+
+info 
+
+#0 ??	partition (array=0x61fe00, low=2, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:26)
+#1 0x40168c	quickSort(array=0x61fe00, low=2, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:60)
+#2 0x4016bd	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#4 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#5 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+
+#0 ??	quickSort (array=0x61fe00, low=2, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#1 0x4016bd	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#2 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#4 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+
+#0 ??	quickSort (array=0x61fe00, low=2, high=2) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:55)
+#1 0x4016a6	quickSort(array=0x61fe00, low=2, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#2 0x4016bd	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#4 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#5 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+#0 ??	quickSort (array=0x61fe00, low=2, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#1 0x4016bd	quickSort(array=0x61fe00, low=1, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#2 0x4016bd	quickSort(array=0x61fe00, low=0, high=3) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#3 0x4016a6	quickSort(array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:63)
+#4 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+#0 ??	quickSort (array=0x61fe00, low=0, high=6) (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:66)
+#1 0x401797	main() (D:\Users\Pedro\Desktop\quick_sort\quick_sort.c:88)
+
+
+

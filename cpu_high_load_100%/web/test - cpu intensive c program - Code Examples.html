@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://code-examples.net/en/q/8d0f41 -->
+<html lang="en"><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- 2022-05-11 20:41:32 -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>test - cpu intensive c program - Code Examples</title>
+    <link rel="stylesheet" href="./test - cpu intensive c program - Code Examples_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./test - cpu intensive c program - Code Examples_files/all.min.css" crossorigin="anonymous">
+    <link href="./test - cpu intensive c program - Code Examples_files/style-x.css" rel="stylesheet" type="text/css">
+    <link rel="alternate" hreflang="en" href="https://code-examples.net/en/q/8d0f41">
+<link rel="alternate" hreflang="ja" href="https://code-examples.net/ja/q/8d0f41">
+<link rel="alternate" hreflang="ko" href="https://code-examples.net/ko/q/8d0f41">
+<link rel="alternate" hreflang="fr" href="https://code-examples.net/fr/q/8d0f41">
+<link rel="alternate" hreflang="de" href="https://code-examples.net/de/q/8d0f41">
+<link rel="alternate" hreflang="it" href="https://code-examples.net/it/q/8d0f41">
+<link rel="alternate" hreflang="ru" href="https://code-examples.net/ru/q/8d0f41">
+<link rel="alternate" hreflang="es" href="https://code-examples.net/es/q/8d0f41">
+<link rel="alternate" hreflang="ar" href="https://code-examples.net/ar/q/8d0f41">
+<link rel="alternate" hreflang="hi" href="https://code-examples.net/hi/q/8d0f41">
+<link rel="alternate" hreflang="zh-CN" href="https://code-examples.net/zh-CN/q/8d0f41">
+<link rel="alternate" hreflang="zh-TW" href="https://code-examples.net/zh-TW/q/8d0f41">
+<meta name="keywords" content="c, windows, linux, performance, cray">
+<meta property="og:site_name" content="Code Examples">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://code-examples.net/en/q/8d0f41">
+<meta property="og:title" content="test - cpu intensive c program">
+<meta property="og:image" content="https://code-examples.net/img/4a/4a8a08f09d37b73795649038408b5f33/4a8a08f09d37b73795649038408b5f33.1.jpg">
+<meta property="article:tag" content="c, windows, linux, performance, cray">
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="./test - cpu intensive c program - Code Examples_files/f.txt"></script><script src="./test - cpu intensive c program - Code Examples_files/f(1).txt"></script><script type="text/javascript" async="" src="./test - cpu intensive c program - Code Examples_files/analytics.js.download"></script><script src="./test - cpu intensive c program - Code Examples_files/f(2).txt" id="google_shimpl"></script><script type="text/javascript" async="" src="./test - cpu intensive c program - Code Examples_files/js"></script><script async="" src="./test - cpu intensive c program - Code Examples_files/js(1)"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-34412481-7');
+        </script>    <script data-ad-client="ca-pub-6424571640879890" async="" src="./test - cpu intensive c program - Code Examples_files/f(3).txt" data-checked-head="true"></script><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="AzoawhTRDevLR66Y6MROu167EDncFPBvcKOaQispTo9ouEt5LvcBjnRFqiAByRT+2cDHG1Yj4dXwpLeIhc98/gIAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A6+nc62kbJgC46ypOwRsNW6RkDn2x7tgRh0wp7jb3DtFF7oEhu1hhm4rdZHZ6zXvnKZLlYcBlQUImC4d3kKihAcAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/9La288e7MDEU2ifusFnMg1C2Ij6uoa/Z/ylwJIXSsWfK37oESIPbxbt4IU86OGqDEPnNVruUiMjfKo65H/CQwAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjYxMjk5MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="./test - cpu intensive c program - Code Examples_files/f(4).txt" as="script"><script type="text/javascript" src="./test - cpu intensive c program - Code Examples_files/f(4).txt"></script><link rel="preload" href="./test - cpu intensive c program - Code Examples_files/f(5).txt" as="script"><script type="text/javascript" src="./test - cpu intensive c program - Code Examples_files/f(5).txt"></script></head>
+<body aria-hidden="false" style="padding: 0px;">
+<header id="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+                            <a class="navbar-brand" href="https://code-examples.net/en">
+                    <b>Code Examples</b>                </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                        </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto mt-2">
+                                            <li class="nav-item active">
+                            <a class="nav-link" href="https://code-examples.net/en/tags">Tags</a>
+                        </li>
+                        <!--
+                        <li class="nav-item active">
+                            <a class="nav-link"
+                               href="/en/docs">
+                                Docs
+                            </a>
+                        </li>
+                        -->
+                                    </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!--sse-->
+
+<br>
+<main class="question" style="height: auto !important;">
+    <div style="height: auto !important;">
+        <article style="height: auto !important;">
+            <div class="container" style="height: auto !important;">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="h2 font-weight-bold">
+                            <span class="heading">
+                            test - cpu intensive c program                            </span>
+                        </h1>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <script async="" src="./test - cpu intensive c program - Code Examples_files/f(3).txt"></script>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 135px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6424571640879890" data-ad-slot="1063775324" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_1_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 135px; width: 540px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 135px; width: 540px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:540px;height:135px" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="540" height="135" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL2NvZGUtZXhhbXBsZXMubmV0L2VuL3EvOGQwZjQxIn0.&quot;}" src="./test - cpu intensive c program - Code Examples_files/ads.html" data-google-container-id="a!2" data-google-query-id="COTD8uKu1_cCFS0QrQYdmFADUw" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>                    </div>
+                </div>
+
+                <br>
+
+                <div style="height: auto !important;">
+                    
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="h4 mt-0 font-weight-bold">
+                                How to get 100% CPU usage from a C program                                <small class="text-muted">
+                                    (6)                                </small>
+                            </h2>
+                            <p>This is quite an interesting question so let me set the scene. I work at The National Museum of Computing, and we have just managed to get a Cray Y-MP EL super computer from 1992 running, and we really want to see how fast it can go!</p>
+<p>We decided the best way to do this was to write a simple C program that would calculate prime numbers and show how long it took to do so, then run the program on a fast modern desktop PC and compare the results.</p>
+<p>We quickly came up with this code to count prime numbers:</p>
+<pre class="hljs cpp"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;time.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">clock_t</span> start, end;
+    <span class="hljs-keyword">double</span> runTime;
+    start = clock();
+    <span class="hljs-keyword">int</span> i, num = <span class="hljs-number">1</span>, primes = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">while</span> (num &lt;= <span class="hljs-number">1000</span>) { 
+        i = <span class="hljs-number">2</span>; 
+        <span class="hljs-keyword">while</span> (i &lt;= num) { 
+            <span class="hljs-keyword">if</span>(num % i == <span class="hljs-number">0</span>)
+                <span class="hljs-keyword">break</span>;
+            i++; 
+        }
+        <span class="hljs-keyword">if</span> (i == num)
+            primes++;
+
+        system(<span class="hljs-string">"clear"</span>);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d prime numbers calculated\n"</span>,primes);
+        num++;
+    }
+
+    end = clock();
+    runTime = (end - start) / (<span class="hljs-keyword">double</span>) CLOCKS_PER_SEC;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"This machine calculated all %d prime numbers under 1000 in %g seconds\n"</span>, primes, runTime);
+}
+</code></pre>
+<p>Which on our dual core laptop running Ubuntu (The Cray runs UNICOS), worked perfectly, getting 100% CPU usage and taking about 10 minutes or so. When I got home I decided to try it on my hex-core modern gaming PC, and this is where we get our first issues.</p>
+<p>I first adapted the code to run on Windows since that is what the gaming PC was using, but was saddened to find that the process was only getting about 15% of the CPU's power. I figured that must be Windows being Windows, so I booted into a Live CD of Ubuntu thinking that Ubuntu would allow the process to run with its full potential as it had done earlier on my laptop.</p>
+<p>However I only got 5% usage! So my question is, how can I adapt the program to run on my gaming machine in either Windows 7 or live Linux at 100% CPU utilisation? Another thing that would be great but not necessary is if the end product can be one .exe that could be easily distributed and ran on Windows machines.</p>
+<p>Thanks a lot!</p>
+<p>P.S. Of course this program didn't really work with the Crays 8 specialist processors, and that is a whole other issue... If you know anything about optimising code to work on 90's Cray super computers give us a shout too!</p>                        </div>
+                    </div>
+
+                    <div class="row" style="height: auto !important;">
+                        <div class="col" style="height: auto !important;">
+                            <div id="answers" style="height: auto !important;">
+                                                                    <hr>
+                                    <article id="answer0" style="height: auto !important;">
+                                        <div class="float-left">
+<i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+</div>                                        <div style="height: auto !important;">
+                                            <blockquote>
+<p>we really want to see how fast it can go!</p>
+</blockquote>
+<p>Your algorithm to generate prime numbers is very inefficient. Compare it to <a href="https://cr.yp.to/primegen.html" rel="noreferrer">primegen</a> that generates the 50847534 primes up to 1000000000 in just 8 seconds on a Pentium II-350.</p>
+<p>To consume all CPUs easily you could solve an <a href="https://en.wikipedia.org/wiki/Embarrassingly_parallel" rel="noreferrer">embarrassingly parallel problem</a> e.g., compute <a href="https://en.wikipedia.org/wiki/Mandelbrot_set" rel="noreferrer">Mandelbrot set</a> or use <a href="https://web.archive.org/web/20110717211140/http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/" rel="noreferrer">genetic programming to paint Mona Lisa</a> in multiple threads (processes).</p><div class="google-auto-placed ap_container" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-6424571640879890" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent; height: 280px;" data-ad-status="filled"><ins id="aswift_4_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 280px; width: 1110px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_4_anchor" style="border: none; height: 280px; width: 1110px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:1110px;height:280px" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1110" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL2NvZGUtZXhhbXBsZXMubmV0L2VuL3EvOGQwZjQxIn0.&quot;}" src="./test - cpu intensive c program - Code Examples_files/ads(1).html" data-google-container-id="a!5" data-google-query-id="COOe4eSu1_cCFUgqrQYdy3QNTQ" data-load-complete="true"></iframe></ins></ins></ins></div>
+<p>Another approach is to take an existing benchmark program for the Cray supercomputer and port it to a modern PC.</p>                                        </div>
+                                    </article>
+                                                                    <hr>
+                                    <article id="answer1">
+                                        <div class="float-left">
+<i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+</div>                                        <div>
+                                            <p>Also be very aware <strong>how</strong> you're loading the CPU. A CPU can do a lot of different tasks, and while many of them will be reported as "loading the CPU 100%" they may each use 100% of different parts of the CPU. In other words, it's very hard to compare two different CPUs for performance, and especially two different CPU architectures. Executing task A may favor one CPU over another, while executing task B it can easily be the other way around (since the two CPUs may have different resources internally and may execute code very differently).</p>
+<p>This is the reason software is just as important for making computers perform optimal as hardware is. This is indeed very true for "supercomputers" as well.</p>
+<p>One measure for CPU performance could be instructions per second, but then again instructions aren't created equal on different CPU architectures. Another measure could be cache IO performance, but cache infrastructure is not equal either. Then a measure could be number of instructions per watt used, as power delivery and dissipation is often a limiting factor when designing a cluster computer.</p>
+<p>So your first question should be: Which performance parameter is important to you? What do you want to measure? If you want to see which machine gets the most FPS out of Quake 4, the answer is easy; your gaming rig will, as the Cray can't run that program at all ;-)</p>
+<p>Cheers,
+Steen</p>                                        </div>
+                                    </article>
+                                                                    <hr>
+                                    <article id="answer2">
+                                        <div class="float-left">
+<i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+</div>                                        <div>
+                                            <p>If you want 100% CPU, you need to use more than 1 core. To do that, you need multiple threads.</p>
+<p><strong>Here's a parallel version using OpenMP:</strong></p>
+<p>I had to increase the limit to <code>1000000</code> to make it take more than 1 second on my machine.</p>
+<pre class="hljs cpp"><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;time.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;omp.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">double</span> start, end;
+    <span class="hljs-keyword">double</span> runTime;
+    start = omp_get_wtime();
+    <span class="hljs-keyword">int</span> num = <span class="hljs-number">1</span>,primes = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">int</span> limit = <span class="hljs-number">1000000</span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> omp parallel for schedule(dynamic) reduction(+ : primes)</span>
+    <span class="hljs-keyword">for</span> (num = <span class="hljs-number">1</span>; num &lt;= limit; num++) { 
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; 
+        <span class="hljs-keyword">while</span>(i &lt;= num) { 
+            <span class="hljs-keyword">if</span>(num % i == <span class="hljs-number">0</span>)
+                <span class="hljs-keyword">break</span>;
+            i++; 
+        }
+        <span class="hljs-keyword">if</span>(i == num)
+            primes++;
+<span class="hljs-comment">//      printf("%d prime numbers calculated\n",primes);</span>
+    }
+
+    end = omp_get_wtime();
+    runTime = end - start;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"This machine calculated all %d prime numbers under %d in %g seconds\n"</span>,primes,limit,runTime);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><strong>Output:</strong></p>
+<blockquote>
+<p>This machine calculated all 78498 prime numbers under 1000000 in 29.753 seconds</p>
+</blockquote>
+<p><strong>Here's your 100% CPU:</strong></p>
+<p></p>                                        </div>
+                                    </article>
+                                                                    <hr>
+                                    <article id="answer3">
+                                        <div class="float-left">
+<i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+</div>                                        <div>
+                                            <p>Simply try to Zip and Unzip a big file , nothing as a heavy I/o operations can use cpu.</p>                                        </div>
+                                    </article>
+                                                                    <hr>
+                                    <article id="answer4">
+                                        <div class="float-left">
+<i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+</div>                                        <div>
+                                            <p>The reason you're getting 15% on a hex core processor is because your code uses 1 core at 100%. 100/6 = 16.67%, which using a moving average with process scheduling (your process would be running under normal priority) could easily be reported as 15%. </p>
+<p>Therefore, in order to use 100% cpu, you would need to use all the cores of your CPU - launch 6 parallel execution code paths for a hex core CPU and have this scale right up to however many processors your Cray machine has :)</p>                                        </div>
+                                    </article>
+                                                                    <hr>
+                                    <article id="answer5">
+                                        <div class="float-left">
+<i class="fas fa-check-circle text-primary mr-2 mb-2"></i>
+</div>                                        <div>
+                                            <p>Try to parallelize your program using, e.g., OpenMP. It is a very simple and effective framework for making up parallel programs.</p>                                        </div>
+                                    </article>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+            </div>
+    <br>
+</main>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <script async="" src="./test - cpu intensive c program - Code Examples_files/f(3).txt"></script>
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 250px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6424571640879890" data-ad-slot="1063775324" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 350px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_2_anchor" style="border: none; height: 250px; width: 350px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: hidden;"><iframe id="aswift_2" name="aswift_2" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 350px; height: 250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="350" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL2NvZGUtZXhhbXBsZXMubmV0L2VuL3EvOGQwZjQxIn0.&quot;}" src="./test - cpu intensive c program - Code Examples_files/ads(2).html" data-google-container-id="a!3" data-google-query-id="CPCB2O2u1_cCFeEPuQYdkiQOqg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>            <br>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+                        <!--
+                <a class="btn btn-outline-primary" href="https://twitter.com/share?url=https%3A%2F%2Fcode-examples.net%2Fen%2Fq%2F8d0f41"
+                   target="_blank" onclick="gtag('event', 'share.twitter', {'event_category': 'share'});">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                </a>
+                &nbsp;
+                <a class="btn btn-outline-primary"
+                   href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fcode-examples.net%2Fen%2Fq%2F8d0f41"
+                   target="_blank" onclick="gtag('event', 'share.facebook', {'event_category': 'share'});">
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+                -->
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="buttons">
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/783">
+                        usage                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/588">
+                        test                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/2494">
+                        stress                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/626">
+                        program                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/1372">
+                        more                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/9848">
+                        intensive                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/1039">
+                        high                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/423">
+                        generate                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/257">
+                        force                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/keyword/39">
+                        calculate                    </a>
+                    &nbsp;
+                                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/tagged/c">
+                        c                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/tagged/windows">
+                        windows                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/tagged/linux">
+                        linux                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/tagged/performance">
+                        performance                    </a>
+                    &nbsp;
+                                    <a class="btn btn-outline-primary" href="https://code-examples.net/en/tagged/cray">
+                        cray                    </a>
+                    &nbsp;
+                            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <ul>
+                                            <li class="my-3">
+                            <a href="https://code-examples.net/en/q/2f0">
+                                How to create a new object instance from a Type                            </a>
+                        </li>
+                                            <li class="my-3">
+                            <a href="https://code-examples.net/en/q/f6be">
+                                How to determine CPU and memory consumption from inside a process?                            </a>
+                        </li>
+                                            <li class="my-3">
+                            <a href="https://code-examples.net/en/q/200e7">
+                                How to measure actual memory usage of an application or process?                            </a>
+                        </li>
+                                            <li class="my-3">
+                            <a href="https://code-examples.net/en/q/1a1e0f">
+                                Improve INSERT-per-second performance of SQLite?                            </a>
+                        </li>
+                                            <li class="my-3">
+                            <a href="https://code-examples.net/en/q/46f9ad">
+                                How to set a variable to the output of a command in Bash?                            </a>
+                        </li>
+                                            <li class="my-3">
+                            <a href="https://code-examples.net/en/q/8fda61">
+                                How to download a file from server using SSH?                            </a>
+                        </li>
+                                    </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                                    <img src="./test - cpu intensive c program - Code Examples_files/4a8a08f09d37b73795649038408b5f33.1.jpg" alt="cray" class="img-fluid rounded mx-auto d-block">
+                            </div>
+        </div>
+    </div>
+
+<!--/sse-->
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <script async="" src="./test - cpu intensive c program - Code Examples_files/f(3).txt"></script>
+<ins class="adsbygoogle" style="display: block; height: 555px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-6424571640879890" data-ad-slot="9553827650" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_3_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 555px; width: 1110px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_3_anchor" style="border: none; height: 555px; width: 1110px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:1110px;height:555px" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1110" height="555" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL2NvZGUtZXhhbXBsZXMubmV0L2VuL3EvOGQwZjQxIn0.&quot;}" src="./test - cpu intensive c program - Code Examples_files/ads(3).html" data-google-container-id="a!4" data-google-query-id="CJfcqu6u1_cCFXwCrQYdtr4H6Q" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>        </div>
+    </div>
+</div>
+
+<br>
+
+<footer>
+    <div class="container">
+        <div class="row border-top pt-3 pb-3">
+            <div class="col-8">
+                                    <a class="mr-3" href="https://code-examples.net/">
+                        English                    </a>
+                                            </div>
+            <div class="col-4 text-right">
+                <a href="https://code-examples.net/en/q/8d0f41#header">
+                    <i class="fas fa-caret-square-up"></i>
+                    Top
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="./test - cpu intensive c program - Code Examples_files/highlight.min.js.download"></script>
+<script src="./test - cpu intensive c program - Code Examples_files/jquery.min.js.download"></script>
+<script src="./test - cpu intensive c program - Code Examples_files/bootstrap.min.js.download" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./test - cpu intensive c program - Code Examples_files/a.js.download"></script>
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;],&quot;additionalSigningData&quot;:&quot;eyJ1cmwiOiJodHRwczovL2NvZGUtZXhhbXBsZXMubmV0L2VuL3EvOGQwZjQxIn0.&quot;}" src="./test - cpu intensive c program - Code Examples_files/ads(4).html" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" style="display: none; width: 100% !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled" data-anchor-shown="true"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; bottom: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,26 L0,6 A6,6 0 0,1 6,1 L50,1 A6,6 0 0,1 56,6 L56,20 A6,6 0 0,0 62,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);"></path><rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="down" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="12" x2="28" y2="18"></line><line x1="28" y1="18" x2="34" y2="12"></line></g></svg></span></ins><ins id="aswift_6_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_6_anchor" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_6" name="aswift_6" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;]}" src="./test - cpu intensive c program - Code Examples_files/zrt_lookup.html" data-google-container-id="a!7" data-google-query-id="CKzS7OKu1_cCFR8DuQYdeCYKyA" data-load-complete="true"></iframe></ins></ins></ins><iframe src="./test - cpu intensive c program - Code Examples_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./test - cpu intensive c program - Code Examples_files/zrt_lookup(1).html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><ins id="aswift_5_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_5_anchor" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_5" name="aswift_5" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" trusttoken="{&quot;type&quot;:&quot;send-redemption-record&quot;,&quot;issuers&quot;:[&quot;https://pagead2.googlesyndication.com&quot;],&quot;refreshPolicy&quot;:&quot;none&quot;,&quot;signRequestData&quot;:&quot;include&quot;,&quot;includeTimestampHeader&quot;:true,&quot;additionalSignedHeaders&quot;:[&quot;sec-time&quot;,&quot;Sec-Redemption-Record&quot;]}" src="./test - cpu intensive c program - Code Examples_files/zrt_lookup(2).html" data-google-container-id="a!6" data-google-query-id="CKvS7OKu1_cCFR8DuQYdeCYKyA" data-load-complete="true"></iframe></ins></ins></ins></html>
