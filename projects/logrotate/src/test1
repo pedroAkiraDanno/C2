@@ -1,0 +1,7 @@
+#!/bin/bash
+  for (( ; ; ))  
+  do  
+  echo "test"  
+  sleep 10  
+  done  
+
