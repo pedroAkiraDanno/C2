@@ -1,12 +1,11 @@
-# Create Large File in C
+# Create a consume Large Memory in C
 
 
-Program to Create a Consume a Large Memory in the System in C
+Program to Create a Consume Large Memory in the System in C
 
 
 **obs:.** 
-	Will create a file with 11G
-	Time to finish about 4 minutes
+	Will create a Memory with 3 GB
 
 
 
