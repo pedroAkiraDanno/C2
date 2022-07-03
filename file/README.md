@@ -1,6 +1,9 @@
-# Language C
+# Create Large File in C
 
-Repo about C 
+Program to Create a Large File in C
+
+obs: 
+will create a file with 11G
 
 
 
@@ -30,9 +33,33 @@ begin:
 
 
 ## Compile projects and files (handmade)
-	gcc -Wall -O2 project.c -o project
+	gcc -Wall -O2 mycreatelargefile.c -o mycreatelargefile
 	#OR
-	gcc project.c  -o project    	
+	gcc mycreatelargefile.c -o mycreatelargefile    	
+
+
+
+
+## Running Example
+	./mycreatelargefile   
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/file/
+
+	gcc -Wall -O2 mycreatelargefile.c -o mycreatelargefile
+	#OR
+	gcc mycreatelargefile.c -o mycreatelargefile    
+
+	./mycreatelargefile   
 
 
 
