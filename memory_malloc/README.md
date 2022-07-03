@@ -1,7 +1,7 @@
 # Create a consume Large Memory in C
 
 
-Program to Create a Consume Large Memory in the System in C
+Program to Create a Consume Large Memory in the System amd Test Memorys in C
 
 
 
@@ -33,7 +33,7 @@ begin:
 	sudo apt install -y clang 
 
 
-## Compile projects and files (handmade)
+## Compile Example projects and files (handmade)
 	gcc -Wall -O2 memory*.c -o memory*
 	#OR
 	gcc memory*.c -o memory*    	
@@ -47,6 +47,7 @@ begin:
 
 
 # memory_malloc.c
+	Will use malloc to consume a large size of memory in the system with C 
 **obs:.** 
 	Will create a Memory with 3 GB
 
@@ -81,8 +82,9 @@ begin:
 
 
 # memory_malloc2.c
-
-
+	Use malloc and realloc and show the memory address just to test
+ 
+ 
 ## STEPS by STEPS on Linux Environment (completed)
     sudo su - 
     sudo apt-get install gcc -y
