@@ -94,15 +94,14 @@ Use malloc and realloc and show the memory address just to test
 ## STEPS by STEPS on Linux Environment (completed)
     sudo su - 
     sudo apt-get install gcc -y
+	sudo apt install libomp-dev  -y
 
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/cpu_high_load_100%/
 
-	gcc -Wall -O2 cpu_intensive2.c -o cpu_intensive2
-	#OR
-	gcc cpu_intensive2.c -o cpu_intensive2    
+	gcc -fopenmp cpu_intensive2.c  -o  cpu_intensive2  
 
 	./cpu_intensive2   
 

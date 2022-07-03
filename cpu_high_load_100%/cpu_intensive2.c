@@ -20,7 +20,7 @@ int main() {
         }
         if(i == num)
             primes++;
-//      printf("%d prime numbers calculated\n",primes);
+     // printf("%d prime numbers calculated\n",primes);
     }
 
     end = omp_get_wtime();
