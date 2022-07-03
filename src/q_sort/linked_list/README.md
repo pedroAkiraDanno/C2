@@ -59,7 +59,7 @@ begin:
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
-    cd C2/q_sort/linked_list/
+    cd C2/src/q_sort/linked_list/
 
 	gcc -Wall -O2 my_quicksort_singly_linked_list.c -o my_quicksort_singly_linked_list
 	#OR
