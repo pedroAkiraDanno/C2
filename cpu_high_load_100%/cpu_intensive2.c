@@ -40,7 +40,7 @@ int main() {
    // int limit = 1000000;
 
 #pragma omp parallel for schedule(dynamic) reduction(+ : primes)
-    for (num = 1; num <= _LIMIT; num++) {
+    for (num = 1; num <= __LIMIT; num++) {
         int i = 2;
         while(i <= num) {
             if(num % i == 0)
@@ -54,7 +54,7 @@ int main() {
 
     end = omp_get_wtime();
     runTime = end - start;
-    printf("This machine calculated all %d prime numbers under %d in %g seconds\n",primes,_LIMIT,runTime);
+    printf("This machine calculated all %d prime numbers under %d in %g seconds\n",primes,__LIMIT,runTime);
 
     return 0;
 }
