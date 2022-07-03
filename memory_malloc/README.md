@@ -67,6 +67,9 @@ begin:
 	#OR
 	gcc memory_malloc.c -o memory_malloc    
 
+	ulimit -a
+	ulimit -s 3000000
+
 	./memory_malloc   
 
 
@@ -120,6 +123,52 @@ begin:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# memory_malloc3.c
+**obs:.** 
+	Will create a Memory with 3 GB
+
+## Compile projects and files (handmade)
+	gcc -Wall -O2 memory_malloc3.c -o memory_malloc3
+	#OR
+	gcc memory_malloc3.c -o memory_malloc3    	
+
+
+
+
+## Running Example
+	./memory_malloc3   
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/memory_malloc/
+
+	gcc -Wall -O2 memory_malloc3.c -o memory_malloc3
+	#OR
+	gcc memory_malloc3.c -o memory_malloc3    
+
+	./memory_malloc3   
 
 
 
