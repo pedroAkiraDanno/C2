@@ -2,9 +2,13 @@
 
 Repo about C 
 
-begin:
+
+
 
 ### STEPS on Linux Environment 
+
+
+begin:
 
 
 ---
@@ -35,7 +39,7 @@ begin:
 
 
 ---
-Inspired in [devdocs](https://devdocs.io/c/) , [cronolog](http://cronolog.org/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) and [programiz](https://www.programiz.com/c-programming), this is C-minimalistic version.
+Inspired in [devdocs](https://devdocs.io/c/) , [cronolog](http://cronolog.org/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) , [programiz](https://www.programiz.com/c-programming) and [gnu](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html), this is C-minimalistic version.
 
 
 
