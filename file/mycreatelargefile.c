@@ -30,7 +30,7 @@
     //MACROS 
     #define _LARGENUMBER 1000000000 //large number     
 
-    //fputc() Function:
+
 
     int main() {
             long long int i;
@@ -52,6 +52,15 @@
 
 
 
+
+
+
+/*
+STUDY: 
+
+    //fputc() Function:
+
+*/
 
 
 /*

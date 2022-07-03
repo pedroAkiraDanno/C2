@@ -4,9 +4,9 @@
 Program to Create a Large File in C
 
 
-**obs:** 
-Will create a file with 11G
-Time to finish about 
+**obs:.** 
+	Will create a file with 11G
+	Time to finish about 4 minutes
 
 
 
