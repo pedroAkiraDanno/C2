@@ -108,7 +108,9 @@ Use malloc and realloc and show the memory address just to test
 
 # memory_malloc3.c
 Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
-**obs:.** Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
+
+**obs:.** 
+Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 
 ## STEPS by STEPS on Linux Environment (completed)
