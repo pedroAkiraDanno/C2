@@ -48,7 +48,9 @@ begin:
 
 # memory_malloc.c
 Will use malloc to consume a large size of memory in the system with C 
-**obs:.** Will create a Memory with 3 GB
+
+**obs:.** 
+Will create a Memory with 3 GB
 
 
 
@@ -143,7 +145,11 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 
 # memory2.c
+Allocated memory until the system crash. Allocated each time: 1548 kilobytes 
 
+
+**obs:.** 
+Need stop manual because exist the infinity loop in the program 	while(1){}
 
 
 ## STEPS by STEPS on Linux Environment (completed)

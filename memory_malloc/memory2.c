@@ -21,7 +21,7 @@
 
 
 
-
+//header files 
 #include <sys/resource.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,7 +39,7 @@ int main() {
       else
         printf("Error in getrusage. errno = %d\n", errno);
       
-	    sleep(10);
+	    sleep(5);
    }
    return 0;
 }
