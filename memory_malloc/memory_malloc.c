@@ -27,6 +27,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h> //to sleep function
 
 
 int main()
@@ -68,7 +69,7 @@ int main()
 		}
 
 
-		sleep(3);
+		sleep(2);
 
 
 		// Print the elements of the array
