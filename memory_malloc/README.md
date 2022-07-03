@@ -4,11 +4,10 @@
 Program to Create a Consume Large Memory in the System in C
 
 
-**obs:.** 
-	Will create a Memory with 3 GB
 
 
-## memory_malloc.c
+
+
 
 
 ### STEPS on Linux Environment 
@@ -37,6 +36,9 @@ begin:
 
 
 
+# memory_malloc.c
+**obs:.** 
+	Will create a Memory with 3 GB
 
 ## Compile projects and files (handmade)
 	gcc -Wall -O2 memory_malloc.c -o memory_malloc
@@ -66,6 +68,64 @@ begin:
 	gcc memory_malloc.c -o memory_malloc    
 
 	./memory_malloc   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# memory_malloc2.c
+**obs:.** 
+	Will create a Memory with 3 GB
+
+## Compile projects and files (handmade)
+	gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
+	#OR
+	gcc memory_malloc2.c -o memory_malloc2    	
+
+
+
+
+## Running Example
+	./memory_malloc2   
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/memory_malloc/
+
+	gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
+	#OR
+	gcc memory_malloc2.c -o memory_malloc2    
+
+	./memory_malloc2   
+
+
+
+
+
+
+
+
+
+
 
 
 
