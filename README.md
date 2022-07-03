@@ -22,7 +22,10 @@ begin:
 	sudo apt update  --yes
 	sudo apt-get update && sudo apt-get upgrade -y
 	apt list --upgradable
-    apt-get install -y gcc
+    sudo apt-get install -y gcc
+	sudo apt-get install build-essential	
+	## Installing Clang on Linux
+	sudo apt install -y clang 
 
 
 
