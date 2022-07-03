@@ -89,7 +89,7 @@ int main()
             ptr[i] = i + 1;
         }
  
-		sleep(2);
+		sleep(3);
 
         // Print the elements of the array
         //printf("The elements of the array are: ");
