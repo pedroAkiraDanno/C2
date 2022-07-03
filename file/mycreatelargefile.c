@@ -28,7 +28,7 @@
     #include <stdlib.h>
 
     //MACROS 
-    #define _LARGENUMBER 1000000000 //large number     
+    #define _LARGENUMBER 100000000 //large number     
 
     //fputc() Function:
 
