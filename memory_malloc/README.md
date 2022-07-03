@@ -47,9 +47,8 @@ begin:
 
 
 # memory_malloc.c
-	Will use malloc to consume a large size of memory in the system with C 
-**obs:.** 
-	Will create a Memory with 3 GB
+Will use malloc to consume a large size of memory in the system with C 
+**obs:.** Will create a Memory with 3 GB
 
 
 
@@ -82,7 +81,7 @@ begin:
 
 
 # memory_malloc2.c
-	Use malloc and realloc and show the memory address just to test
+Use malloc and realloc and show the memory address just to test
  
  
 ## STEPS by STEPS on Linux Environment (completed)
@@ -108,6 +107,8 @@ begin:
 
 
 # memory_malloc3.c
+Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
+**obs:.** Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 
 ## STEPS by STEPS on Linux Environment (completed)
