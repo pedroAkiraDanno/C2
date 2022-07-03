@@ -33,24 +33,22 @@ begin:
 	sudo apt install -y clang 
 
 
+## Compile projects and files (handmade)
+	gcc -Wall -O2 memory*.c -o memory*
+	#OR
+	gcc memory*.c -o memory*    	
+
+
+
+
+## Running Example
+	./memory*   
 
 
 
 # memory_malloc.c
 **obs:.** 
 	Will create a Memory with 3 GB
-
-## Compile projects and files (handmade)
-	gcc -Wall -O2 memory_malloc.c -o memory_malloc
-	#OR
-	gcc memory_malloc.c -o memory_malloc    	
-
-
-
-
-## Running Example
-	./memory_malloc   
-
 
 
 
@@ -82,27 +80,7 @@ begin:
 
 
 
-
-
-
-
-
 # memory_malloc2.c
-**obs:.** 
-	Will create a Memory with 3 GB
-
-## Compile projects and files (handmade)
-	gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
-	#OR
-	gcc memory_malloc2.c -o memory_malloc2    	
-
-
-
-
-## Running Example
-	./memory_malloc2   
-
-
 
 
 ## STEPS by STEPS on Linux Environment (completed)
@@ -127,32 +105,7 @@ begin:
 
 
 
-
-
-
-
-
-
-
-
-
-
 # memory_malloc3.c
-**obs:.** 
-	Will create a Memory with 3 GB
-
-## Compile projects and files (handmade)
-	gcc -Wall -O2 memory_malloc3.c -o memory_malloc3
-	#OR
-	gcc memory_malloc3.c -o memory_malloc3    	
-
-
-
-
-## Running Example
-	./memory_malloc3   
-
-
 
 
 ## STEPS by STEPS on Linux Environment (completed)
@@ -184,36 +137,7 @@ begin:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # memory2.c
-**obs:.** 
-	Will create a Memory with 3 GB
-
-## Compile projects and files (handmade)
-	gcc -Wall -O2 memory2.c -o memory2
-	#OR
-	gcc memory2.c -o memory2    	
-
-
-
-
-## Running Example
-	./memory2   
-
 
 
 

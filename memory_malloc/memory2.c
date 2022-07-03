@@ -22,8 +22,6 @@
 
 
 
-
-
 #include <sys/resource.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -37,10 +35,11 @@ int main() {
       p = (int*)malloc(sizeof(int)*1000);
       int ret = getrusage(RUSAGE_SELF,&r_usage);
       if(ret == 0)
-         //printf("Memory usage: %ld kilobytes\n",r_usage.ru_maxrss);
+        printf("Memory usage: %ld kilobytes\n",r_usage.ru_maxrss);
       else
-         printf("Error in getrusage. errno = %d\n", errno);
-      usleep(10);
+        printf("Error in getrusage. errno = %d\n", errno);
+      
+	    sleep(10);
    }
    return 0;
 }
