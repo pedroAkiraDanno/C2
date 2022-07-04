@@ -2,6 +2,7 @@
 
 
 Program to Create a Quick sort in C
+Inserted Total qtd : 1000000 to sort and include the progress bar feature
 
 
 **obs:.** 
