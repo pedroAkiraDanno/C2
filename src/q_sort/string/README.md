@@ -156,6 +156,64 @@ Will create a File with size of 393K with 200 words and each word was 200 caract
 
 
 
+
+
+
+# myquick_sort_string4.c
+Project create about string in quick_sort, file and sort a strings with large caracteres and a lot words in the system with C 
+
+**obs:.** 
+Will create a File with size of 393K with 200 words and each word was 200 caracteres
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+	ulimit -a
+	ulimit -s 2097152
+	ulimit -a
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/src/q_sort/string/
+
+	cp ranstr4.h		 /usr/include
+
+
+	gcc -Wall -O2 myquick_sort_string4.c -o myquick_sort_string4
+	#OR
+	gcc myquick_sort_string4.c -o myquick_sort_string4    
+
+	./myquick_sort_string4   
+
+
+
+
+## Example output and run:
+		./myquick_sort_string4   
+
+		Enter the filename : at.txt
+
+		Initial contents of file
+		nwlrb,bmqbh,cdarz,owkky,hiddq,scdxr,jmowf,rxsjy,bldbe,fsarc,
+
+		After applying quick sort
+		bldbe,bmqbh,cdarz,fsarc,hiddq,jmowf,nwlrb,owkky,rxsjy,scdxr,
+		Execute_time : 0.001203
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 Inspired in [devdocs](https://devdocs.io/c/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) , [programiz](https://www.programiz.com/c-programming) and [gnu](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html), this is C-minimalistic version.
 
