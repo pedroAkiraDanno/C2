@@ -131,6 +131,25 @@ Will print Unsorted Array and Sorted array in ascending order
 
 
 
+## Example output :
+
+		root@instance-20220608-2248:~/C2/src/q_sort# ./ranstr3
+		Enter the filename : a.txt
+
+
+
+
+
+## Example output file:
+
+		ceafsokean
+		pdzgxcjacv
+		povbsgmnxj
+		dzpfghtqlw
+		dczeizhuzl
+		pozmssuehr
+
+
 
 
 
