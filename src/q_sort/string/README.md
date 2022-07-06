@@ -107,6 +107,50 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 
 
+# test7.c
+Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
+
+**obs:.** 
+Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/src/q_sort/string/quicksort_string2
+
+	cp ranstr4.h		 /usr/include
+
+
+	gcc -Wall -O2 test7.c -o test7
+	#OR
+	gcc test7.c -o test7    
+
+	./test7   
+
+
+
+## Example output :
+
+		Unsorted Array
+		8  7  2  1  0  9  5  10  3  6
+		Sorted array in ascending order:
+		0  1  2  3  5  6  7  8  9  10
+
+
+
+## Example output file:
+
+		vmxukumtaeoebotcsrthzideexbtenfabdwlzlgapxgslauftnptwuzcrcvwpcyshwghhohylnqzplgjavcyrdajfvhxyhpfdxonmvlzleyarfjrcnquqqfwomtovkvyiklwhzvsduvwbenfudzmwgikudypqtoyfbwncrfhnadohrudwvpseaeydcotyetdhrskjaty cxplqlomgehmglljqbfohatosmadowbqtscldsxmyeyesjqimxwtxrkrfmwtiambsqmwimihsgnksdseaqyakktpwqlfqxiknxgxlqgdzuqrxkvydvanftcclpjbmrobqwzbnffmbxdzhazmwzzduehgtqjikxlaumchujvviyuraveywdcrjlxfcgnogyoalsjhdecl 
+
+
+
+
+
 
 ---
 Inspired in [devdocs](https://devdocs.io/c/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) , [programiz](https://www.programiz.com/c-programming) and [gnu](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html), this is C-minimalistic version.
