@@ -73,6 +73,50 @@ begin:
 
 
 
+
+
+
+
+
+# quicksort_string2.c
+Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
+
+**obs:.** 
+Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+
+	//cd C2 & git checkout feature/q_sort
+    cd C2/src/q_sort/
+
+
+
+	gcc -Wall -O2 quick_sort.c -o quick_sort
+	#OR
+	gcc quick_sort.c -o quick_sort    
+
+	./quick_sort   
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 Inspired in [devdocs](https://devdocs.io/c/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) , [programiz](https://www.programiz.com/c-programming) and [gnu](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html), this is C-minimalistic version.
 
