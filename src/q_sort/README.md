@@ -78,7 +78,7 @@ begin:
 
 
 
-# quicksort_string2.c
+# quick_sort.c
 Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
 
 **obs:.** 

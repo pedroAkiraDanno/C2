@@ -10,7 +10,7 @@ void swap(int *a, int *b);							               // swap function
 int partition(int array[], int low, int high);         // partition fuction
 void printArray(int array[], int size);  			         // print function
 void quickSort(int array[], int low, int high);	       // quick_sort function
-
+void printArrayPartition(int array[], int size);       // just to TEST
 
 
 
@@ -71,7 +71,7 @@ int partition(int array[], int low, int high) {
   swap(&array[i + 1], &array[high]); // put the pivot in the correct position
   //because i is the end of less value then pivot, so the correct position to the pivot is i+1 - it logical
 
-  printArrayPartition(array, 10); // just to TEST
+  //printArrayPartition(array, 10); // just to TEST
   // return the partition point
   return (i + 1); // i + i = pivot
 }
@@ -114,6 +114,9 @@ void printArray(int array[], int size) {
 
 
 
+
+
+// just to TEST
 // function to print array elements
 void printArrayPartition(int array[], int size) {
   printf("print partiton:  ");
