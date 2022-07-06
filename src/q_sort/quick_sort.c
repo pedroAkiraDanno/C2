@@ -1,37 +1,44 @@
+
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ * 01-07-2022, v2.0, Pedro Akira Danno Lima
+ *
+ * Compile: gcc -Wall -O2 quick_sort.c -o quick_sort
+ */
+
+
+//header files 
 #include<stdio.h>
 #include <stdbool.h>
 #include<time.h>
 
-//global variable
+
+
+
+/* Global Variables */
 int qtd = 0;
 
-//functions
+
+
+/*Function Prototypes */
 void swap(int *a, int *b);							               // swap function
 int partition(int array[], int low, int high);         // partition fuction
 void printArray(int array[], int size);  			         // print function
 void quickSort(int array[], int low, int high);	       // quick_sort function
-void printArrayPartition(int array[], int size);       // just to TEST
+void printArrayPartition(int array[], int size);       // just to TEST -dont use more
 
-
-
-// main function
-int main() {
-  int data[] = {8, 7, 2, 1, 0, 9, 5, 10, 3, 6};
-
-  int n = sizeof(data) / sizeof(data[0]);
-
-  printf("Unsorted Array\n");
-  printArray(data, n);
-
-  // perform quicksort on data
-  quickSort(data, 0, n - 1);
-
-  printf("Sorted array in ascending order: \n");
-  printArray(data, n);
-
-      printf("qtd quicksort functions: %d \n ", qtd);
-  return 0;
-}
 
 
 
@@ -42,6 +49,9 @@ void swap(int *a, int *b) {
   *a = *b;
   *b = t;
 }
+
+
+
 
 
 // function to find the partition position
@@ -75,6 +85,9 @@ int partition(int array[], int low, int high) {
   // return the partition point
   return (i + 1); // i + i = pivot
 }
+
+
+
 
 
 
@@ -134,6 +147,25 @@ void printArrayPartition(int array[], int size) {
 
 
 
+
+// main function
+int main() {
+  int data[] = {8, 7, 2, 1, 0, 9, 5, 10, 3, 6};
+
+  int n = sizeof(data) / sizeof(data[0]);
+
+  printf("Unsorted Array\n");
+  printArray(data, n);
+
+  // perform quicksort on data
+  quickSort(data, 0, n - 1);
+
+  printf("Sorted array in ascending order: \n");
+  printArray(data, n);
+
+      //printf("qtd quicksort functions: %d \n ", qtd); //just to test
+  return 0;
+}
 
 
 
