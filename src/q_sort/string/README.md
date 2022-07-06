@@ -160,10 +160,10 @@ Will create a File with size of 393K with 200 words and each word was 200 caract
 
 
 # myquick_sort_string4.c
-Project create about string in quick_sort, file and sort a strings with large caracteres and a lot words in the system with C 
+Project create about string in quick_sort, file and sort a strings with 5 caracteres and 10 words in the system with C 
 
 **obs:.** 
-Will create a File with size of 393K with 200 words and each word was 200 caracteres
+Will create a File with size of 60MB with 10 words and each word was 5 caracteres
 
 
 ## STEPS by STEPS on Linux Environment (completed)

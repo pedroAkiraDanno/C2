@@ -156,6 +156,99 @@ Will print Unsorted Array and Sorted array in ascending order
 
 
 
+
+
+
+# myquick_sort.c
+Will use quick_sort and partition functions  with C 
+
+**obs:.** 
+Will print Unsorted Array and Sorted array in ascending order
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+	cd C2/src/q_sort/
+
+
+
+	gcc -Wall -O2 myquick_sort.c -o myquick_sort
+	#OR
+	gcc myquick_sort.c -o myquick_sort    
+
+	./myquick_sort   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# myquick_sort2.c
+Will use quick_sort and partition functions  with C 
+
+**obs:.** 
+Will print Unsorted Array and Sorted array in ascending order
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+	cd C2/src/q_sort/
+
+
+
+	gcc -Wall -O2 myquick_sort2.c -o myquick_sort2
+	#OR
+	gcc myquick_sort2.c -o myquick_sort2    
+
+	./myquick_sort2   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 Inspired in [devdocs](https://devdocs.io/c/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) , [programiz](https://www.programiz.com/c-programming) and [gnu](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html), this is C-minimalistic version.
 
