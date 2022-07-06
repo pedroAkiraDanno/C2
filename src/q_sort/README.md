@@ -208,8 +208,9 @@ Will print Unsorted Array and Sorted array in ascending order
 # myquick_sort2.c
 Will use quick_sort and partition functions  with C 
 
+
 **obs:.** 
-Will print Unsorted Array and Sorted array in ascending order
+Will print Unsorted Array and Sorted array in ascending order with just 10 number control by MAX_SIZE
 
 
 
