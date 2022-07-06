@@ -4,7 +4,7 @@
 #include <time.h>
 #include <stdbool.h>
 //include <D:\Users\Pedro\Desktop\P\database\PostgreSQL\PRINCIPAL\postgresql\auto\study\C\quicksort_string2\ranstr4.h>
-
+#include <ranstr4.h>
 
 
 //constant
