@@ -121,6 +121,8 @@ Will print Unsorted Array and Sorted array in ascending order
     cd C2/src/q_sort/
 
 
+	cp ranstr4.h		 /usr/include
+
 
 	gcc -Wall -O2 ranstr3.c -o ranstr3
 	#OR
@@ -131,7 +133,7 @@ Will print Unsorted Array and Sorted array in ascending order
 
 
 
-## Example output :
+## Example output & Run :
 
 		root@instance-20220608-2248:~/C2/src/q_sort# ./ranstr3
 		Enter the filename : a.txt
