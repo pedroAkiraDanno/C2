@@ -98,6 +98,43 @@ Will print Unsorted Array and Sorted array in ascending order
 
 
 
+
+# ranstr3.c
+Will use quick_sort and partition functions  with C 
+
+**obs:.** 
+Will print Unsorted Array and Sorted array in ascending order
+
+
+
+
+## STEPS by STEPS on Linux Environment (completed)
+    sudo su - 
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+
+	//  cd ~   ;   	cd C2 	; 	git checkout feature/q_sort   ;      cd ~  ;     cd C2/src/q_sort/
+	
+    cd C2/src/q_sort/
+
+
+
+	gcc -Wall -O2 ranstr3.c -o ranstr3
+	#OR
+	gcc ranstr3.c -o ranstr3    
+
+	./ranstr3   
+
+
+
+
+
+
+
+
 ---
 Inspired in [devdocs](https://devdocs.io/c/) , [docs.microsoft](https://docs.microsoft.com/en-us/cpp/c-language/?view=msvc-170) , [cppreference](https://en.cppreference.com/w/c/language) , [programiz](https://www.programiz.com/c-programming) and [gnu](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html), this is C-minimalistic version.
 

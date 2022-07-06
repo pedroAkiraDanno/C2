@@ -108,7 +108,7 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 
 # test7.c
-Project create a file and sort a strings with large caracteres and a lot words in the system with C 
+Project create about string in quick_sort, file and sort a strings with large caracteres and a lot words in the system with C 
 
 **obs:.** 
 Will create a File with size of 393K with 200 words and each word was 200 caracteres
