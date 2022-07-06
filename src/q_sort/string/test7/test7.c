@@ -1,3 +1,27 @@
+/*
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ *
+ * 01-07-2022, v2.0, Pedro Akira Danno Lima
+ *
+ * Compile: gcc -Wall -O2 test7.c -o test7
+ */
+
+
+
+
+
+//header files 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -6,13 +30,15 @@
 #include <ranstr4.h>
 
 
-
-//constant
+//MACROS  && constant
 #define MAX 2000
 
 
 
-//global variable
+
+
+
+/* Global Variables */
 int k=0;
 
 //struct
@@ -23,10 +49,14 @@ char a[2000];
 };
 
 
+
+
 //function
 void quicksort(struct nick items[], int left, int right);                   //function for quick sort
 void printArray(struct nick array[], int size);  			         // print function
 void printArrayQuick(struct nick array[], int size);  			         // print function
+
+
 
 
 //main
@@ -118,7 +148,11 @@ int main()
 
 
 
-                                                         //function for quick sort
+
+
+
+
+//function for quick sort
 void quicksort(struct nick items[],int first,int last)
 {
      int j,i,pivot;
@@ -167,6 +201,10 @@ void quicksort(struct nick items[],int first,int last)
 
 
 
+
+
+
+
 // function to print array elements
 void printArray(struct nick array[], int size) {
   for (int i = 0; i < size; ++i) {
@@ -174,6 +212,9 @@ void printArray(struct nick array[], int size) {
   }
   printf("\n");
 }
+
+
+
 
 
 // function to print array elements
@@ -184,6 +225,10 @@ void printArrayQuick(struct nick array[], int size) {
   }
   printf("\n");
 }
+
+
+
+
 
 
 

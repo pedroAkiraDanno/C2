@@ -118,10 +118,14 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
     sudo su - 
     sudo apt-get install gcc -y
 
+	ulimit -a
+	ulimit -s 2097152
+	ulimit -a
+
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
-    cd C2/src/q_sort/string/quicksort_string2
+    cd C2/src/q_sort/string/test7/
 
 	cp ranstr4.h		 /usr/include
 
