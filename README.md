@@ -2,7 +2,7 @@
 
 Repo about C 
 
-
+For more information look at [doc](https://github.com/pedroAkiraDanno/logrotate2/blob/main/doc/main/logFileRotate.pdf) and [wiki]() .
 
 
 ### STEPS on Linux Environment 
@@ -21,7 +21,7 @@ begin:
 
 
 
-## 1- step install gcc
+## 1- Step install gcc
 	### login server: 
 	### On Ubuntu ### 
 	sudo su - 
