@@ -108,10 +108,10 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 
 # test7.c
-Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
+Project create a file and sort a strings with large caracteres and a lot words in the system with C 
 
 **obs:.** 
-Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
+Will create a File with size of 393K with 200 words and each word was 200 caracteres
 
 
 ## STEPS by STEPS on Linux Environment (completed)
@@ -140,10 +140,10 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
 
 ## Example output :
 
-		Unsorted Array
-		8  7  2  1  0  9  5  10  3  6
-		Sorted array in ascending order:
-		0  1  2  3  5  6  7  8  9  10
+		Enter the filename : test.txt
+
+		Execute_time : 22.128271
+
 
 
 
