@@ -1,25 +1,21 @@
-# Create Large File in C
+# Create Quick Sort in C
 
 
 Program to Create a Quick sort in C
  
- Inserted Total qtd : 1000000 to sort and include the progress bar feature
 
 
-**obs:.** 
-	Will created the quick sort with linked list
 
-
+begin:
 
 
 
 ### STEPS on Linux Environment 
 
 
-begin:
-
 
 ---
+
 
 
 
@@ -41,33 +37,18 @@ begin:
 
 
 ## Compile projects and files (handmade)
-	gcc -Wall -O2 my_quicksort_singly_linked_list.c -o my_quicksort_singly_linked_list
+	gcc -Wall -O2 quicksort*.c -o quicksort*
 	#OR
-	gcc my_quicksort_singly_linked_list.c -o my_quicksort_singly_linked_list    	
+	gcc quicksort*.c -o quicksort*    	
 
 
 
 
 ## Running Example
-	./my_quicksort_singly_linked_list   
+	./quicksort*   
 
 
 
-
-## STEPS by STEPS on Linux Environment (completed)
-    sudo su - 
-    sudo apt-get install gcc -y
-
-    cd ~
-    rm -fr C2/
-    git clone https://github.com/pedroAkiraDanno/C2
-    cd C2/src/q_sort/
-
-	gcc -Wall -O2 quick_sort9.c -o quick_sort9
-	#OR
-	gcc quick_sort9.c -o quick_sort9    
-
-	./quick_sort9   
 
 
 
@@ -79,10 +60,10 @@ begin:
 
 
 # quick_sort.c
-Will use malloc to consume a large size of memory  and use realloc to expand the memory size in the system with C 
+Will use quick_sort and partition functions  with C 
 
 **obs:.** 
-Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
+Will print Unsorted Array and Sorted array in ascending order
 
 
 
@@ -95,7 +76,7 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-	// cd C2 	& 	git checkout feature/q_sort &      cd ~   &     cd C2/src/q_sort/
+	//  cd ~ &   	cd C2 	& 	git checkout feature/q_sort &      cd ~   &     cd C2/src/q_sort/
     cd C2/src/q_sort/
 
 
