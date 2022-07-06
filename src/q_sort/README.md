@@ -95,7 +95,7 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-	//cd C2 & git checkout feature/q_sort
+	// cd C2 	& 	git checkout feature/q_sort &      cd ~   &     cd C2/src/q_sort/
     cd C2/src/q_sort/
 
 
