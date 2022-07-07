@@ -62,10 +62,10 @@ begin:
 
 
 # ranstr3.c
-Will use quick_sort and partition functions  with C 
+Program to create a random with 10000 words and each word has 10 caracteres
 
 **obs:.** 
-Will print Unsorted Array and Sorted array in ascending order
+This program just a simple example of random - it not the complex random program 
 
 
 
