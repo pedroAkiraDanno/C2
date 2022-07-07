@@ -200,11 +200,6 @@ Will print Unsorted Array and Sorted array in ascending order
 
 
 
-
-
-
-
-
 # myquick_sort2.c
 Will use quick_sort and partition functions  with C 
 
