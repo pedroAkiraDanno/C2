@@ -161,7 +161,7 @@ NEED USE ranstr4.h include
 
 ## Example output & Run :
 
-		root@instance-20220608-2248:~/C2/src/q_sort# ./ranstr3
+		root@instance-20220608-2248:~/C2/src/q_sort# ./ranstr4
 		Enter the filename : a.txt
 
 
