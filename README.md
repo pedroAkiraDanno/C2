@@ -17,6 +17,7 @@ begin:
 
 
 ## About versions (for more infos check [CHANGELOG.md](https://github.com/pedroAkiraDanno/C2))
+	v0.3.1 - version v0.3.1 add new file and folder about random
     v0.3.0 - version  can use -every thing is OK to use  **explain- add q_sort 
     v0.2.0 - first version that can use -every thing is OK to use  **explain- OK with files and projects about: cpu_high_load_100%, file, memory_malloc, q_sort/linked_list 
     v0.1.0 - dont recomend to use, is forks about old project - have a lot problemas and bugs to fix 
