@@ -132,6 +132,7 @@ Program to create a random with 10000 words and each word has 10 caracteres
 
 **obs:.** 
 This program just a simple example of random - it not the complex random program 
+
 NEED USE ranstr4.h include
 
 
