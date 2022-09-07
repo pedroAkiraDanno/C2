@@ -80,7 +80,7 @@
  #include <stdlib.h>
 
  int main(){
- 	exixstem varios tipod de arvores em computacao, desenvolvidas para diferentes
+ 	exixstem varios tipos de arvores em computacao, desenvolvidas para diferentes
  	tipos de aplicacoes:
  	-arvore binaria de busca
  	-arvore AVL (arvores balanceada)
