@@ -1,7 +1,7 @@
 
   /************************************************
   * GOALS     : BINARY TREE        
-  * CRIACAO   : 06-08-2022	                      
+  * DATA      : 06-08-2022	                      
   * VERSION   : 1.0		                          
   * AUTHOR    : Pedro Akira Danno Lima            
   ************************************************/
@@ -38,6 +38,9 @@ int value;
 struct node *left_child, *right_child;
 };
 
+
+
+
 struct node *new_node(int value)
 {
 struct node *tmp = (struct node *)malloc(sizeof(struct node));
@@ -45,6 +48,9 @@ tmp->value = value;
 tmp->left_child = tmp->right_child = NULL;
 return tmp;
 }
+
+
+
 
 void print(struct node *root_node) // displaying the nodes!
 {
