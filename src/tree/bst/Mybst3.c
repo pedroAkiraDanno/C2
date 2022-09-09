@@ -128,14 +128,12 @@ int main()
                 break;
 
             case 6:
-                printf("Number of nodes in tree  = %d ",countnodes(root));
-                printf("\n");
+                printf("Number of nodes in tree  = %d \n",countnodes(root));
                 count = 0;
                 break;
 
             case 7:
-                printf("Sum of nodes in tree  = %d", sumofnodes(root));
-                printf("\n");
+                printf("Sum of nodes in tree  = %d \n", sumofnodes(root));
                 break;
 
  
