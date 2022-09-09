@@ -73,6 +73,32 @@ Have menu, to continue write "y"
 
     ./bst3
 
+# My Binary Seach Tree (Mybst3)
+
+Will use binary seach tree (Mybst3) C
+
+**obs:.**
+Have menu, to continue write "y"
+
+## STEPS by STEPS on Linux Environment (completed)
+
+    sudo su -
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/bst
+    cd C2/src/tree/bst
+
+
+    gcc -Wall -O2 Mybst3.c -o Mybst3
+    #OR
+    gcc Mybst3.c -o Mybst3
+
+    ./Mybst3
+
 ## REFERENCES:
 
 https://www.sanfoundry.com/c-programming-examples/
