@@ -63,9 +63,6 @@ int leafnodes(struct node* );
 int heightoftree(struct node* );
 void computesum(struct  node *t);
 void display();
-int height(struct  node *);
-void printlevel(struct node *, int, int);
-void print();
 
  
 int main()
@@ -88,13 +85,12 @@ int main()
         printf("\n8.  Count Leaf Nodes");    
         printf("\n9.  Sum of All Nodes");    
         printf("\n10. Find the Height of Tree");   
-        printf("\n11. Display the sum of the elements at the same level");  
-        printf("\n12. Print All Nodes of Nth Level in Single Line");          
+        printf("\n11. Display the sum of the elements at the same level");   
         printf("\n\n-- Traversals --");
-        printf("\n\n13. Inorder ");
-        printf("\n14. Post Order ");
-        printf("\n15. Pre Oder ");
-        printf("\n16. Exit");
+        printf("\n\n12. Inorder ");
+        printf("\n13. Post Order ");
+        printf("\n14. Pre Oder ");
+        printf("\n15. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -172,23 +168,18 @@ int main()
                 break;              
 
             case 12:
-                print();        
-                break;                    
-
-
-            case 13:
                 inorder(root);
                 break;
  
-            case 14:
+            case 13:
                 postorder(root);
                 break;
  
-            case 15:
+            case 14:
                 preorder(root);
                 break;
  
-            case 16:
+            case 15:
                 printf("\n\nProgram was terminated\n");
                 break;
  
@@ -596,7 +587,7 @@ void display()
 /*
  * Prints all the nodes of all levels of the binary tree
  */
-void print()
+/* void print()
 {
     int h, i;
  
@@ -607,11 +598,11 @@ void print()
         printlevel(root, i, 0);
         printf("\n");
     }
-}
+} */
 /*
  *Prints the nodes of a particular level
  */
-void printlevel(struct node *n, int desired, int current)
+/* void printlevel(struct node *n, int desired, int current)
 {
     if (n)
     {
@@ -623,12 +614,12 @@ void printlevel(struct node *n, int desired, int current)
             printlevel(n->right, desired, current + 1);
         }
     }
-}
+} */
  
 /*
  * Height of the binary tree
  */
-int height(struct node *n)
+/* int height(struct node *n)
 {
     int lheight, rheight;
     if (n != NULL)
@@ -640,7 +631,7 @@ int height(struct node *n)
         else 
             return(rheight+1);
     }
-}
+} */
 //REFERENCE: https://www.sanfoundry.com/c-program-print-elements-nth-level/
 
 //------
