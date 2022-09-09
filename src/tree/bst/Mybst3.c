@@ -57,6 +57,7 @@ struct node *smallest_node(struct node *);
 struct node *largest_node(struct node *);
 int get_data();
 int countnodes(struct node *);
+int sumofnodes(struct node *);
 
  
 int main()
@@ -74,12 +75,13 @@ int main()
         printf("\n3. Search");
         printf("\n4. Get Larger Node Data");
         printf("\n5. Get smaller Node data");
-        printf("\n6. Count the Number of Nodes");        
+        printf("\n6. Count the Number of Nodes");       
+        printf("\n7. Sum of All Nodes");          
         printf("\n\n-- Traversals --");
-        printf("\n\n7. Inorder ");
-        printf("\n8. Post Order ");
-        printf("\n9. Pre Oder ");
-        printf("\n10. Exit");
+        printf("\n\n8. Inorder ");
+        printf("\n9. Post Order ");
+        printf("\n10. Pre Oder ");
+        printf("\n11. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -126,24 +128,30 @@ int main()
                 break;
 
             case 6:
-                printf("Number of nodes in tree 2 = %d ",countnodes(root));
+                printf("Number of nodes in tree  = %d ",countnodes(root));
                 printf("\n");
                 count = 0;
                 break;
- 
+
             case 7:
+                printf("Sum of nodes in tree  = %d", sumofnodes(root));
+                printf("\n");
+                break;
+
+ 
+            case 8:
                 inorder(root);
                 break;
  
-            case 8:
+            case 9:
                 postorder(root);
                 break;
  
-            case 9:
+            case 10:
                 preorder(root);
                 break;
  
-            case 10:
+            case 11:
                 printf("\n\nProgram was terminated\n");
                 break;
  
@@ -363,6 +371,23 @@ int countnodes(struct node *root)
     }
     return count;
 }
+
+
+
+//Sum of All Nodes in a Binary Tree
+int sumofnodes(struct node *root)
+{
+    int rightsubtree, leftsubtree, sum = 0;
+    if(root != NULL)
+    {
+        leftsubtree = sumofnodes(root->left);
+        rightsubtree = sumofnodes(root->right);
+        sum = (root->info) + leftsubtree + rightsubtree;
+        return sum;
+    }
+}
+
+
 
 
 
