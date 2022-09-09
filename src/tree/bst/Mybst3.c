@@ -63,8 +63,8 @@ int leafnodes(struct node* );
 int heightoftree(struct node* );
 void computesum(struct  node *t);
 void display();
-int height(node *);
-void printlevel(node *, int, int);
+int height(struct  node *);
+void printlevel(struct node *, int, int);
 void print();
 
  
@@ -611,7 +611,7 @@ void print()
 /*
  *Prints the nodes of a particular level
  */
-void printlevel(node *n, int desired, int current)
+void printlevel(struct node *n, int desired, int current)
 {
     if (n)
     {
@@ -628,7 +628,7 @@ void printlevel(node *n, int desired, int current)
 /*
  * Height of the binary tree
  */
-int height(node *n)
+int height(struct node *n)
 {
     int lheight, rheight;
     if (n != NULL)
