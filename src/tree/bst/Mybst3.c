@@ -490,15 +490,15 @@ int calculateSum(struct node *temp){
 
 
 
-/* int heightoftree(struct node* root)
+/*  int heightoftree(struct node* root)
 {
     int max;
  
     if (root!=NULL)
     {
-        /*Finding the height of left subtree.*/
+        //Finding the height of left subtree.
         int leftsubtree = heightoftree(root->left); 
-        /*Finding the height of right subtree.*/
+        //Finding the height of right subtree.
         int rightsubtree = heightoftree(root->right);  
         if (leftsubtree > rightsubtree)
         {
@@ -511,7 +511,7 @@ int calculateSum(struct node *temp){
             return max;
         }
     }
-} */
+}  */
 //REFERENCE: https://www.sanfoundry.com/c-program-find-height-tree-using-recursion/
 
 
