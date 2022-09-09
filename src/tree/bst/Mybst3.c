@@ -126,7 +126,7 @@ int main()
                 break;
 
             case 6:
-                printf("Number of nodes in tree 2 = %d ",countnodes(node));
+                printf("Number of nodes in tree 2 = %d ",countnodes(root));
                 printf("\n");
                 count = 0;
                 break;
