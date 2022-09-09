@@ -60,7 +60,7 @@ int countnodes(struct node *);
 int calculateSum(struct node *);
 int nonleafnodes(struct node* );
 int leafnodes(struct node* );
-int heightoftree(struct node* );
+/* int heightoftree(struct node* ); */
 void computesum(struct  node *t);
 void display();
 
@@ -84,13 +84,13 @@ int main()
         printf("\n7.  Count Non Leaf Nodes");    
         printf("\n8.  Count Leaf Nodes");    
         printf("\n9.  Sum of All Nodes");    
-        printf("\n10. Find the Height of Tree");   
-        printf("\n11. Display the sum of the elements at the same level");   
+/*         printf("\n10. Find the Height of Tree");  */  
+        printf("\n10. Display the sum of the elements at the same level");   
         printf("\n\n-- Traversals --");
-        printf("\n\n12. Inorder ");
-        printf("\n13. Post Order ");
-        printf("\n14. Pre Oder ");
-        printf("\n15. Exit");
+        printf("\n\n11. Inorder ");
+        printf("\n12. Post Order ");
+        printf("\n13. Pre Oder ");
+        printf("\n14. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -149,37 +149,36 @@ int main()
             case 8:
                 printf("Number of leaf nodes in first Tree are\t%d\n",leafnodes(root));
                 count = 0;
-                break;                    
-
+                break;                  
                 
             case 9:
                 printf("Sum of all nodes of binary tree: %d \n", calculateSum(root));  
                 break;
 
-            case 10:
+/*             case 10:
                 printf("Height of the first Tree is\t%d\n",heightoftree(root));
-                break;       
+                break;        */
 
-            case 11:
+            case 10:
                 count = 0;
                 max = 0;
                 computesum(root);
                 display();                
                 break;              
 
-            case 12:
+            case 11:
                 inorder(root);
                 break;
  
-            case 13:
+            case 12:
                 postorder(root);
                 break;
  
-            case 14:
+            case 13:
                 preorder(root);
                 break;
  
-            case 15:
+            case 14:
                 printf("\n\nProgram was terminated\n");
                 break;
  
@@ -491,7 +490,7 @@ int calculateSum(struct node *temp){
 
 
 
-int heightoftree(struct node* root)
+/* int heightoftree(struct node* root)
 {
     int max;
  
@@ -512,7 +511,7 @@ int heightoftree(struct node* root)
             return max;
         }
     }
-}
+} */
 //REFERENCE: https://www.sanfoundry.com/c-program-find-height-tree-using-recursion/
 
 
