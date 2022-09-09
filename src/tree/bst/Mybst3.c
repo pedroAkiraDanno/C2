@@ -132,26 +132,24 @@ int main()
                 count = 0;
                 break;
 
-            case 6:
+            case 7:
                 printf("Sum of all nodes of binary tree: %d", calculateSum(root));  
                 printf("\n");
                 break;
 
-
-
-            case 7:
+            case 8:
                 inorder(root);
                 break;
  
-            case 8:
+            case 9:
                 postorder(root);
                 break;
  
-            case 9:
+            case 10:
                 preorder(root);
                 break;
  
-            case 10:
+            case 11:
                 printf("\n\nProgram was terminated\n");
                 break;
  
