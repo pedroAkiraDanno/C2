@@ -99,9 +99,9 @@ Have menu, to continue write "y"
 
     ./Mybst3
 
-# My Binary Seach Tree (Mybst3Ramdom)
+# My Binary Seach Tree (Mybst3Random)
 
-Will use binary seach tree (Mybst3Ramdom) with 500000 random data C
+Will use binary seach tree (Mybst3Random) with 500000 random data C
 
 **obs:.**
 Have menu, to continue write "y"
@@ -120,11 +120,11 @@ Have menu, to continue write "y"
     cd C2/src/tree/bst
 
 
-    gcc -Wall -O2 Mybst3Ramdom.c -o Mybst3Ramdom
+    gcc -Wall -O2 Mybst3Random.c -o Mybst3Random
     #OR
-    gcc Mybst3Ramdom.c -o Mybst3Ramdom
+    gcc Mybst3Random.c -o Mybst3Random
 
-    ./Mybst3Ramdom
+    ./Mybst3Random
 
 ## REFERENCES:
 
