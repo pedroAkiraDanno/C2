@@ -59,6 +59,7 @@ int get_data();
 int countnodes(struct node *);
 int calculateSum(struct node *);
 int nonleafnodes(struct node* );
+int heightoftree(struct node* );
 
  
 int main()
@@ -78,12 +79,13 @@ int main()
         printf("\n5. Get smaller Node data");
         printf("\n6. Count the Number of Nodes");  
         printf("\n7. Count Non Leaf Nodes");          
-        printf("\n8. Sum of All Nodes");         
+        printf("\n8. Sum of All Nodes");    
+        printf("\n9. Find the Height of Tree");         
         printf("\n\n-- Traversals --");
-        printf("\n\n9. Inorder ");
-        printf("\n10. Post Order ");
-        printf("\n11. Pre Oder ");
-        printf("\n12. Exit");
+        printf("\n\n10. Inorder ");
+        printf("\n11. Post Order ");
+        printf("\n12. Pre Oder ");
+        printf("\n13. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -144,18 +146,22 @@ int main()
                 break;
 
             case 9:
+                printf("Height of the first Tree is\t%d\n",heightoftree(root));
+                break;                
+
+            case 10:
                 inorder(root);
                 break;
  
-            case 10:
+            case 11:
                 postorder(root);
                 break;
  
-            case 11:
+            case 12:
                 preorder(root);
                 break;
  
-            case 12:
+            case 13:
                 printf("\n\nProgram was terminated\n");
                 break;
  
@@ -444,7 +450,29 @@ int calculateSum(struct node *temp){
 
 
 
-
+int heightoftree(struct node* root)
+{
+    int max;
+ 
+    if (root!=NULL)
+    {
+        /*Finding the height of left subtree.*/
+        int leftsubtree = heightoftree(root->left); 
+        /*Finding the height of right subtree.*/
+        int rightsubtree = heightoftree(root->right);  
+        if (leftsubtree > rightsubtree)
+        {
+            max = leftsubtree + 1;
+            return max;
+        }
+        else
+        {
+            max = rightsubtree + 1;
+            return max;
+        }
+    }
+}
+//REFERENCE: https://www.sanfoundry.com/c-program-find-height-tree-using-recursion/
 
 
 
