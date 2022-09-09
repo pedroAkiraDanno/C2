@@ -157,7 +157,7 @@ int main()
                 break;
 
             case 10:
-                printf("Height of the first Tree is: %d \n",heightoftree(root));
+                printf("Height of the first Tree is\t%d\n",heightoftree(root));
                 break;       
 
             case 11:
