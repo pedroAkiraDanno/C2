@@ -43,7 +43,7 @@ struct node
  
 // globally initialized root pointer
 struct node *root = NULL;
-static int count = 0; //used in function countnodes(struct node *)
+static int count = 0, sum[100] = {0}, max = 0; //used in function countnodes(struct node *)
  
 // function prototyping
 struct node *create_node(int);
@@ -60,7 +60,8 @@ int countnodes(struct node *);
 int calculateSum(struct node *);
 int nonleafnodes(struct node* );
 int heightoftree(struct node* );
-
+void computesum(struct  node *t);
+void display();
  
 int main()
 {
@@ -80,12 +81,13 @@ int main()
         printf("\n6. Count the Number of Nodes");  
         printf("\n7. Count Non Leaf Nodes");          
         printf("\n8. Sum of All Nodes");    
-        printf("\n9. Find the Height of Tree");         
+        printf("\n9. Find the Height of Tree");   
+        printf("\n10. Display the sum of the elements at the same level");  
         printf("\n\n-- Traversals --");
-        printf("\n\n10. Inorder ");
-        printf("\n11. Post Order ");
-        printf("\n12. Pre Oder ");
-        printf("\n13. Exit");
+        printf("\n\n11. Inorder ");
+        printf("\n12. Post Order ");
+        printf("\n13. Pre Oder ");
+        printf("\n14. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -147,21 +149,28 @@ int main()
 
             case 9:
                 printf("Height of the first Tree is\t%d\n",heightoftree(root));
-                break;                
+                break;       
 
             case 10:
+                count = 0;
+                max = 0;
+                computesum(root);
+                display();                
+                break;                                
+
+            case 11:
                 inorder(root);
                 break;
  
-            case 11:
+            case 12:
                 postorder(root);
                 break;
  
-            case 12:
+            case 13:
                 preorder(root);
                 break;
  
-            case 13:
+            case 14:
                 printf("\n\nProgram was terminated\n");
                 break;
  
@@ -473,6 +482,62 @@ int heightoftree(struct node* root)
     }
 }
 //REFERENCE: https://www.sanfoundry.com/c-program-find-height-tree-using-recursion/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Function to find the sum of nodes at same distance */
+void computesum(struct node *t)
+{
+    if (root == NULL)
+    {    
+        printf("Tree is empty ");
+        return;
+    }
+    if (t->left != NULL)
+    {
+        count++;    
+        computesum(t->left);
+    }
+    sum[count] = sum[count] + t->value;  /* addition of elelment by row wise */
+    if (max < count)
+        max = count;
+    if (t->right != NULL)
+    {
+        count++;        
+        computesum(t->right);
+    }
+    count--;
+}
+
+ /* To display the sum of the nodes at the same distance */
+void display()
+{
+    int i;
+ 
+    printf("Sum of nodes : \n Level \t Sum ");
+    for (i = 0; i <= max; i++)
+       printf("\n %d \t: %d ", i, sum[i]);
+}
+//REFERENCE: https://www.sanfoundry.com/c-program-summation-of-node-values/
+
+
+
+
+
+
+
+
+
 
 
 
