@@ -75,13 +75,12 @@ int main()
         printf("\n3. Search");
         printf("\n4. Get Larger Node Data");
         printf("\n5. Get smaller Node data");
-        printf("\n6. Count the Number of Nodes");       
-        printf("\n7. Sum of All Nodes");          
+        printf("\n6. Count the Number of Nodes");  
         printf("\n\n-- Traversals --");
-        printf("\n\n8. Inorder ");
-        printf("\n9. Post Order ");
-        printf("\n10. Pre Oder ");
-        printf("\n11. Exit");
+        printf("\n\n7. Inorder ");
+        printf("\n8. Post Order ");
+        printf("\n9. Pre Oder ");
+        printf("\n10. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -132,24 +131,20 @@ int main()
                 count = 0;
                 break;
 
-            case 7:
-                printf("Sum of nodes in tree  = %d \n", sumofnodes(root));
-                break;
 
- 
-            case 8:
+            case 7:
                 inorder(root);
                 break;
  
-            case 9:
+            case 8:
                 postorder(root);
                 break;
  
-            case 10:
+            case 9:
                 preorder(root);
                 break;
  
-            case 11:
+            case 10:
                 printf("\n\nProgram was terminated\n");
                 break;
  
