@@ -80,9 +80,6 @@ This program just a simple example of random - it not the complex random program
     cd C2/src/random/
 
 
-	cp ranstr4.h		 /usr/include
-
-
 	gcc -Wall -O2 ranstr3.c -o ranstr3
 	#OR
 	gcc ranstr3.c -o ranstr3    
@@ -131,11 +128,12 @@ This program just a simple example of random - it not the complex random program
 
 
 # ranstr4.c
-Will use quick_sort and partition functions  with C 
+Program to create a random with 10000 words and each word has 10 caracteres
 
 **obs:.** 
-Will print Unsorted Array and Sorted array in ascending order
+This program just a simple example of random - it not the complex random program 
 
+NEED USE ranstr4.h include
 
 
 
@@ -163,7 +161,7 @@ Will print Unsorted Array and Sorted array in ascending order
 
 ## Example output & Run :
 
-		root@instance-20220608-2248:~/C2/src/q_sort# ./ranstr3
+		root@instance-20220608-2248:~/C2/src/q_sort# ./ranstr4
 		Enter the filename : a.txt
 
 
