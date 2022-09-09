@@ -55,7 +55,7 @@ void preorder();
 struct node *smallest_node(struct node *);
 struct node *largest_node(struct node *);
 int get_data();
-int countnodes(struct node *root)
+int countnodes(struct node *root);
 
  
 int main()
