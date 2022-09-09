@@ -508,7 +508,7 @@ void computesum(struct node *t)
         count++;    
         computesum(t->left);
     }
-    sum[count] = sum[count] + t->value;  /* addition of elelment by row wise */
+    sum[count] = sum[count] + t->data;  /* addition of elelment by row wise */
     if (max < count)
         max = count;
     if (t->right != NULL)
