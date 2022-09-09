@@ -58,6 +58,7 @@ struct node *largest_node(struct node *);
 int get_data();
 int countnodes(struct node *);
 int calculateSum(struct node *);
+int nonleafnodes(struct node* );
 
  
 int main()
@@ -76,12 +77,13 @@ int main()
         printf("\n4. Get Larger Node Data");
         printf("\n5. Get smaller Node data");
         printf("\n6. Count the Number of Nodes");  
-        printf("\n7. Sum of All Nodes");          
+        printf("\n7. Count Non Leaf Nodes");          
+        printf("\n8. Sum of All Nodes");         
         printf("\n\n-- Traversals --");
-        printf("\n\n8. Inorder ");
-        printf("\n9. Post Order ");
-        printf("\n10. Pre Oder ");
-        printf("\n11. Exit");
+        printf("\n\n9. Inorder ");
+        printf("\n10. Post Order ");
+        printf("\n11. Pre Oder ");
+        printf("\n12. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -133,22 +135,27 @@ int main()
                 break;
 
             case 7:
+                printf("Count Non Leaf Nodes in a Tree  = %d \n",nonleafnodes(root));
+                count = 0;
+                break;                            
+                
+            case 8:
                 printf("Sum of all nodes of binary tree: %d \n", calculateSum(root));  
                 break;
 
-            case 8:
+            case 9:
                 inorder(root);
                 break;
  
-            case 9:
+            case 10:
                 postorder(root);
                 break;
  
-            case 10:
+            case 11:
                 preorder(root);
                 break;
  
-            case 11:
+            case 12:
                 printf("\n\nProgram was terminated\n");
                 break;
  
@@ -370,6 +377,25 @@ int countnodes(struct node *root)
 }
 
 
+//Count Non Leaf Nodes in a Tree
+int nonleafnodes(struct node* newnode)
+{
+ 
+    if(newnode != NULL)
+    {
+        nonleafnodes(newnode->left);
+        if((newnode->left != NULL) || (newnode->right != NULL))
+        {
+            count++;
+        }
+        nonleafnodes(newnode->right);
+    }
+    return count;
+ 
+}
+ 
+
+
 
 //Sum of All Nodes in a Binary Tree
 /* int sumofnodes(struct node *root)
@@ -413,7 +439,7 @@ int calculateSum(struct node *temp){
         return sum;  
   }      
 }  
-
+//REFERENCE: https://prepinsta.com/c-program/sum-of-all-nodes-in-binary-tree/
 
 
 
