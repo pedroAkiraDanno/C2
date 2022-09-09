@@ -43,6 +43,7 @@ struct node
  
 // globally initialized root pointer
 struct node *root = NULL;
+static int count = 0; //used in function countnodes(struct node *)
  
 // function prototyping
 struct node *create_node(int);
@@ -353,7 +354,6 @@ int get_data()
 
 
 //Count the Number of Nodes in Binary Tree
-static int count = 0;
 int countnodes(struct node *root)
 {
     if(root != NULL)
