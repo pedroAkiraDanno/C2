@@ -74,7 +74,7 @@ int main()
         printf("\n3. Search");
         printf("\n4. Get Larger Node Data");
         printf("\n5. Get smaller Node data");
-        printf("\n6. Get smaller Node data");
+        printf("\n6. Count the Number of Nodes");        
         printf("\n\n-- Traversals --");
         printf("\n\n7. Inorder ");
         printf("\n8. Post Order ");
@@ -130,7 +130,6 @@ int main()
                 printf("\n");
                 count = 0;
                 break;
-
  
             case 7:
                 inorder(root);
