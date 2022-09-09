@@ -382,7 +382,7 @@ int sumofnodes(struct node *root)
     {
         leftsubtree = sumofnodes(root->left);
         rightsubtree = sumofnodes(root->right);
-        sum = (root->info) + leftsubtree + rightsubtree;
+        sum = (root->data) + leftsubtree + rightsubtree;
         return sum;
     }
 }
