@@ -116,6 +116,7 @@ Have menu, to continue write "y"
     git clone https://github.com/pedroAkiraDanno/C2
 
     //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/bst
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/bst
     cd C2/src/tree/bst
 
 
