@@ -75,15 +75,15 @@ int main()
     while (userActive == 'Y' || userActive == 'y')
     {
         printf("\n\n------- Binary Search Tree ------\n");
-        printf("\n1. Insert");
-        printf("\n2. Delete");
-        printf("\n3. Search");
-        printf("\n4. Get Larger Node Data");
-        printf("\n5. Get smaller Node data");
-        printf("\n6. Count the Number of Nodes");  
-        printf("\n7. Count Non Leaf Nodes");    
-        printf("\n8. Count Leaf Nodes");    
-        printf("\n9. Sum of All Nodes");    
+        printf("\n1.  Insert");
+        printf("\n2.  Delete");
+        printf("\n3.  Search");
+        printf("\n4.  Get Larger Node Data");
+        printf("\n5.  Get smaller Node data");
+        printf("\n6.  Count the Number of Nodes");  
+        printf("\n7.  Count Non Leaf Nodes");    
+        printf("\n8.  Count Leaf Nodes");    
+        printf("\n9.  Sum of All Nodes");    
         printf("\n10. Find the Height of Tree");   
         printf("\n11. Display the sum of the elements at the same level");  
         printf("\n\n-- Traversals --");
