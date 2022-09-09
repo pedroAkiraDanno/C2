@@ -99,6 +99,32 @@ Have menu, to continue write "y"
 
     ./Mybst3
 
+# My Binary Seach Tree (Mybst3Ramdom)
+
+Will use binary seach tree (Mybst3Ramdom) with 500000 random data C
+
+**obs:.**
+Have menu, to continue write "y"
+
+## STEPS by STEPS on Linux Environment (completed)
+
+    sudo su -
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/bst
+    cd C2/src/tree/bst
+
+
+    gcc -Wall -O2 Mybst3Ramdom.c -o Mybst3Ramdom
+    #OR
+    gcc Mybst3Ramdom.c -o Mybst3Ramdom
+
+    ./Mybst3Ramdom
+
 ## REFERENCES:
 
 https://www.sanfoundry.com/c-programming-examples/
