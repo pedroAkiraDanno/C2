@@ -57,7 +57,7 @@ struct node *smallest_node(struct node *);
 struct node *largest_node(struct node *);
 int get_data();
 int countnodes(struct node *);
-int sumofnodes(struct node *);
+int calculateSum(struct node *);
 
  
 int main()
@@ -76,11 +76,12 @@ int main()
         printf("\n4. Get Larger Node Data");
         printf("\n5. Get smaller Node data");
         printf("\n6. Count the Number of Nodes");  
+        printf("\n7. Sum of All Nodes");          
         printf("\n\n-- Traversals --");
-        printf("\n\n7. Inorder ");
-        printf("\n8. Post Order ");
-        printf("\n9. Pre Oder ");
-        printf("\n10. Exit");
+        printf("\n\n8. Inorder ");
+        printf("\n9. Post Order ");
+        printf("\n10. Pre Oder ");
+        printf("\n11. Exit");
  
         printf("\n\nEnter Your Choice: ");
         scanf("%d", &userChoice);
@@ -130,6 +131,12 @@ int main()
                 printf("Number of nodes in tree  = %d \n",countnodes(root));
                 count = 0;
                 break;
+
+            case 6:
+                printf("Sum of all nodes of binary tree: %d", calculateSum(root));  
+                printf("\n");
+                break;
+
 
 
             case 7:
@@ -368,7 +375,7 @@ int countnodes(struct node *root)
 
 
 //Sum of All Nodes in a Binary Tree
-int sumofnodes(struct node *root)
+/* int sumofnodes(struct node *root)
 {
     int rightsubtree, leftsubtree, sum = 0;
     if(root != NULL)
@@ -379,6 +386,41 @@ int sumofnodes(struct node *root)
         return sum;
     }
 }
+
+//REFERENCE: https://www.sanfoundry.com/c-program-sum-of-all-nodes-in-binary-tree/
+ */
+
+
+
+//calculateSum() will calculate the sum of all the nodes present in the binary tree  
+int calculateSum(struct node *temp){  
+    int sum, sumLeft, sumRight;  
+    sum = sumRight = sumLeft = 0;  
+      
+    //Check whether tree is empty  
+    if(root == NULL) {  
+        printf("Tree is empty\n");  
+        return 0;  
+    }  
+    else {  
+        //Calculate the sum of nodes present in left subtree  
+        if(temp->left != NULL)  
+            sumLeft = calculateSum(temp->left);  
+          
+        //Calculate the sum of nodes present in right subtree  
+        if(temp->right != NULL)  
+              sumRight = calculateSum(temp->right);  
+          
+        //Calculate the sum of all nodes by adding sumLeft, sumRight and root node's data  
+        sum = temp->data + sumLeft + sumRight;   
+        return sum;  
+  }      
+}  
+
+
+
+
+
 
 
 
