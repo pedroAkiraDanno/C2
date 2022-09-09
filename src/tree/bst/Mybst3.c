@@ -133,8 +133,7 @@ int main()
                 break;
 
             case 7:
-                printf("Sum of all nodes of binary tree: %d", calculateSum(root));  
-                printf("\n");
+                printf("Sum of all nodes of binary tree: %d \n", calculateSum(root));  
                 break;
 
             case 8:
