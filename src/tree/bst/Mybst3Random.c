@@ -39,6 +39,13 @@ OBS:
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+
+//MACROS 
+#define MAX_SIZE 9000000
+
+
  
 // structure of a node
 struct node
@@ -48,13 +55,14 @@ struct node
     struct node *right;
 };
  
+
+ 
 // globally initialized root pointer
 struct node *root = NULL;
 static int count = 0, sum[100] = {0}, max = 0; //used in function countnodes(struct node *)
 
 
-//MACROS 
-#define MAX_SIZE 9000000
+
 
 
  
@@ -78,8 +86,12 @@ void computesum(struct  node *t);
 void display();
 
  
-int main()
-{
+int main(){
+
+    // the seed for a new sequence of pseudo-random integers
+    // to be returned by rand()
+    srand(time(NULL));
+
     int data;
     struct node* result = NULL; 
     int i;    
@@ -95,14 +107,11 @@ int main()
 
 
 
-
-
-
     //preorder(root);
     printf("Number of nodes in tree  = %d \n",countnodes(root));
     count = 0;  
 
-    printf("Sum of all nodes of binary tree: %lld \n", calculateSum(root)); 
+    printf("\nSum of all nodes of binary tree: %lld \n", calculateSum(root)); 
 
     result = largest_node(root);
     if (result != NULL)
