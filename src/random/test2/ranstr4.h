@@ -1,5 +1,6 @@
-#ifndef RANSTR4_FILE  
-#define RANSTR4_FILE  
+#ifndef ranstr4_file  
+#define ranstr4_file  
+
   /**
   * not a cryptographically secure number
   * return interger [0, n).
@@ -25,8 +26,9 @@
 /*
 COMPILE:
 
-cd /usr/include
-vi ranstr4.h
+#OLD DONT USE 
+  cd /usr/include
+  vi ranstr4.h
 
 
 
