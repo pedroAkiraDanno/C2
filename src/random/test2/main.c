@@ -21,7 +21,8 @@ int main(int argc, char **argv) {
 
   fflush (stdout);
   printf("Enter the filename : ");
-  fgets(fname, MAX, stdin);
+  //fgets(fname, MAX, stdin);
+  scanf("%s",fname);
 
 
 
