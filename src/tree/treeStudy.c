@@ -437,6 +437,165 @@ https://www.youtube.com/watch?v=8KyZedtkEhk
 
 
 
+Once-Only Headers | Including Multiple Header Files  | Once-Only Headers (The C Preprocessor)
+
+
+    If a header file happens to be included twice, the compiler will process its contents twice and it will result in an error. The standard way to prevent this is to enclose the entire real contents of the file in a conditional, like this −
+
+    #ifndef HEADER_FILE
+    #define HEADER_FILE
+
+    the entire header file file
+
+    #endif
+
+
+    This construct is commonly known as a wrapper #ifndef. When the header is included again, the conditional will be false, because HEADER_FILE is defined. The preprocessor will skip over the entire contents of the file, and the compiler will not see it twice.
+
+
+
+    Computed Includes
+
+
+    Sometimes it is necessary to select one of the several different header files to be included into your program. For instance, they might specify configuration parameters to be used on different sorts of operating systems. You could do this with a series of conditionals as follows −
+
+
+    #if SYSTEM_1
+    # include "system_1.h"
+    #elif SYSTEM_2
+    # include "system_2.h"
+    #elif SYSTEM_3
+    ...
+    #endif
+
+
+    But as it grows, it becomes tedious, instead the preprocessor offers the ability to use a macro for the header name. This is called a computed include. Instead of writing a header name as the direct argument of #include, you simply put a macro name there −
+
+    #define SYSTEM_H "system_1.h"
+    ...
+    #include SYSTEM_H
+    SYSTEM_H will be expanded, and the preprocessor will look for system_1.h as if the #include had been written that way originally. SYSTEM_H could be defined by your Makefile with a -D option.
+
+
+    REFERENCE: https://www.tutorialspoint.com/cprogramming/c_header_files.htm
+
+
+
+
+
+
+
+
+Including Multiple Header Files: 
+    You can use various header files in a program. When a header file is included twice within a program, the compiler processes the contents of that header file twice. This leads to an error in the program. To eliminate this error, conditional preprocessor directives are used. 
+    Syntax: 
+    
+
+    #ifndef HEADER_FILE_NAME
+    #define HEADER_FILE_NAME
+
+    the entire header file
+
+    #endif
+    This construct is called wrapper “#ifndef”. When the header is included again, the conditional will become false, because HEADER_FILE_NAME is defined. The preprocessor will skip over the entire contents of the file and the compiler will not see it twice. 
+    Sometimes it’s essential to include several diverse header files based on the requirements of the program. For this, multiple conditionals are used.
+    Syntax: 
+    
+
+    #if SYSTEM_ONE
+            #include "system1.h"
+    #elif SYSTEM_TWO
+            #include "system2.h"
+    #elif SYSTEM_THREE
+    ....
+    #endif
+
+    REFERENCE: https://www.geeksforgeeks.org/header-files-in-c-cpp-and-its-uses/
+
+
+
+
+
+
+
+
+
+2.7 Wrapper Headers
+    Sometimes it is necessary to adjust the contents of a system-provided header file without editing it directly. GCC’s fixincludes operation does this, for example. One way to do that would be to create a new header file with the same name and insert it in the search path before the original header. That works fine as long as you’re willing to replace the old header entirely. But what if you want to refer to the old header from the new one?
+
+    You cannot simply include the old header with ‘#include’. That will start from the beginning, and find your new header again. If your header is not protected from multiple inclusion (see Once-Only Headers), it will recurse infinitely and cause a fatal error.
+
+    You could include the old header with an absolute pathname:
+
+    #include "/usr/include/old-header.h"
+    This works, but is not clean; should the system headers ever move, you would have to edit the new headers to match.
+
+    There is no way to solve this problem within the C standard, but you can use the GNU extension ‘#include_next’. It means, “Include the next file with this name”. This directive works like ‘#include’ except in searching for the specified file: it starts searching the list of header file directories after the directory in which the current file was found.
+
+    Suppose you specify -I /usr/local/include, and the list of directories to search also includes /usr/include; and suppose both directories contain signal.h. Ordinary #include <signal.h> finds the file under /usr/local/include. If that file contains #include_next <signal.h>, it starts searching after that directory, and finds the file in /usr/include.
+
+    ‘#include_next’ does not distinguish between <file> and "file" inclusion, nor does it check that the file you specify has the same name as the current file. It simply looks for the file named, starting with the directory in the search path after the one where the current file was found.
+
+    The use of ‘#include_next’ can lead to great confusion. We recommend it be used only when there is no other alternative. In particular, it should not be used in the headers belonging to a specific program; it should be used only to make global corrections along the lines of fixincludes.
+
+    REFERENCE: https://gcc.gnu.org/onlinedocs/cpp/Wrapper-Headers.html#Wrapper-Headers
+
+
+
+
+
+
+2.4 Once-Only Headers
+    If a header file happens to be included twice, the compiler will process its contents twice. This is very likely to cause an error, e.g. when the compiler sees the same structure definition twice. Even if it does not, it will certainly waste time.
+
+    The standard way to prevent this is to enclose the entire real contents of the file in a conditional, like this:
+
+    File foo.  
+    #ifndef FILE_FOO_SEEN
+    #define FILE_FOO_SEEN
+
+    the entire file
+
+    #endif !FILE_FOO_SEEN 
+    This construct is commonly known as a wrapper #ifndef. When the header is included again, the conditional will be false, because FILE_FOO_SEEN is defined. The preprocessor will skip over the entire contents of the file, and the compiler will not see it twice.
+
+    CPP optimizes even further. It remembers when a header file has a wrapper ‘#ifndef’. If a subsequent ‘#include’ specifies that header, and the macro in the ‘#ifndef’ is still defined, it does not bother to rescan the file at all.
+
+    You can put comments outside the wrapper. They will not interfere with this optimization.
+
+    The macro FILE_FOO_SEEN is called the controlling macro or guard macro. In a user header file, the macro name should not begin with ‘_’. In a system header file, it should begin with ‘__’ to avoid conflicts with user programs. In any kind of header file, the macro name should contain the name of the file and some additional text, to avoid conflicts with other header files.
+
+
+    REFERENCE: https://gcc.gnu.org/onlinedocs/cpp/Once-Only-Headers.html#Once-Only-Headers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.8 System Headers
+    The header files declaring interfaces to the operating system and runtime libraries often cannot be written in strictly conforming C. Therefore, GCC gives code found in system headers special treatment. All warnings, other than those generated by ‘#warning’ (see Diagnostics), are suppressed while GCC is processing a system header. Macros defined in a system header are immune to a few warnings wherever they are expanded. This immunity is granted on an ad-hoc basis, when we find that a warning generates lots of false positives because of code in macros defined in system headers.
+
+    Normally, only the headers found in specific directories are considered system headers. These directories are determined when GCC is compiled. There are, however, two ways to make normal headers into system headers:
+
+    Header files found in directories added to the search path with the -isystem and -idirafter command-line options are treated as system headers for the purposes of diagnostics.
+    There is also a directive, #pragma GCC system_header, which tells GCC to consider the rest of the current include file a system header, no matter where it was found. Code that comes before the ‘#pragma’ in the file is not affected. #pragma GCC system_header has no effect in the primary source file.
+    On some targets, such as RS/6000 AIX, GCC implicitly surrounds all system headers with an ‘extern "C"’ block when compiling as C++.
+
+    REFERENCE: https://gcc.gnu.org/onlinedocs/cpp/System-Headers.html#System-Headers
+
+
+
+
 
 
 
