@@ -5,7 +5,7 @@
 #include <string.h>
 #include "ranstr4.h"
 #define MAX 15
-
+#define MAX_SIZE 1000
 
 
 int main(int argc, char **argv) {
@@ -31,8 +31,8 @@ int main(int argc, char **argv) {
 
 
   // compare them with the pivot
-  for (int i = 0; i < 100; i++) {
-      p = randomString(10);
+  for (int i = 0; i < MAX_SIZE; i++) {
+      p = randomString(MAX);
       //printf("%s\n", p);
       fprintf(fp,"%s \n",p); //write to a file 
   }
