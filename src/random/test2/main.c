@@ -24,6 +24,7 @@ int main(int argc, char **argv) {
   //fgets(fname, MAX, stdin);
   scanf("%s",fname);
 
+  fname[strcspn(fname, "\n\r")] = '\0';
 
 
   fp=fopen(fname,"w"); //create a file 
