@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int main () {
    int i, n;
@@ -11,7 +12,7 @@ int main () {
    srand((unsigned) time(&t));
 
    /* Print 5 random numbers from 0 to 49 */
-   for( i = 0 ; i < n ; i++ ) {
+   for( i = 0 ; i < SHRT_MAX ; i++ ) {
       printf("%d\n", rand() % 50);
    }
    
