@@ -8,6 +8,16 @@
 int main()  
 {  
 
+
+    /* 
+        void srand(unsigned int seed)
+        Parameters
+        seed − This is an integer value to be used as seed by the pseudo-random number generator algorithm.
+
+        Return Value
+        This function does not return any value.   
+    */  
+
     time_t t;
     /* Intializes random number generator */
     srand((unsigned) time(&t));
