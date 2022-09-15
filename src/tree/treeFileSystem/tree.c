@@ -96,6 +96,9 @@ int walk(const char* directory, const char* prefix, counter_t *counter) {
   return 0;
 }
 
+
+
+
 int main(int argc, char *argv[]) {
   char* directory = argc > 1 ? argv[1] : ".";
   printf("%s\n", directory);
