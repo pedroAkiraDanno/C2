@@ -90,6 +90,7 @@ Have menu, to continue write "y"
     git clone https://github.com/pedroAkiraDanno/C2
 
     //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/bst
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/bst
     cd C2/src/tree/bst
 
 
@@ -98,6 +99,33 @@ Have menu, to continue write "y"
     gcc Mybst3.c -o Mybst3
 
     ./Mybst3
+
+# My Binary Seach Tree (Mybst3Random)
+
+Will use binary seach tree (Mybst3Random) with 500000 random data C
+
+**obs:.**
+Have menu, to continue write "y"
+
+## STEPS by STEPS on Linux Environment (completed)
+
+    sudo su -
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/bst
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/bst
+    cd C2/src/tree/bst
+
+
+    gcc -Wall -O2 Mybst3Random.c -o Mybst3Random
+    #OR
+    gcc Mybst3Random.c -o Mybst3Random
+
+    ./Mybst3Random
 
 ## REFERENCES:
 
