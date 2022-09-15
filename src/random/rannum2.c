@@ -16,6 +16,7 @@ int main()
 
         Return Value
         This function does not return any value.   
+        REFERENCE: https://www.tutorialspoint.com/c_standard_library/c_function_srand.htm
     */  
 
     time_t t;
