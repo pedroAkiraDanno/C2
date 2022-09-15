@@ -1167,3 +1167,469 @@ REFERENCE: https://www.tutorialspoint.com/cprogramming/c_function_call_by_refere
 
 
 //----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------
+
+/*
+STUDY const
+
+
+
+Const Qualifier in C
+
+We use the const qualifier to declare a variable as constant. That means that we cannot change the value once the variable has been initialized. Using const has a very big benefit. For example, if you have a constant value of the value of PI, you wouldn't like any part of the program to modify that value. So you should declare that as a const.
+
+Objects declared with const-qualified types may be placed in read-only memory by the compiler, and if the address of a const object is never taken in a program, it may not be stored at all. For example,
+
+
+Example
+#include<stdio.h>
+int main() {
+   const int x = 10;
+   x = 12;
+   return 0;
+}
+
+Output
+[Error] assignment of read-only variable 'x'
+
+
+REFERENCE: https://www.tutorialspoint.com/const-qualifier-in-c
+
+
+
+
+*/
+
+
+
+
+
+
+
+/*
+Constants in C Explained – How to Use #define and the const Qualifier to Define Constants
+
+When you're programming, there are times when you'll want the values of certain variables to remain unchanged. In the C language, you'll likely define them as constants.
+
+
+You can define constants in C in a few different ways. In this tutorial, you'll learn how to use #define and the const qualifier to define them.
+
+
+How to Use #define to Define Constants in C
+One of the common ways to define constants in C is to use the #define preprocessor directive, as shown below:
+
+#define <VAR_NAME> <VALUE>
+
+
+In the above syntax:
+
+<VAR_NAME> is a placeholder for the name of the constant.
+It's recommended that you name constants in the uppercase, as it helps differentiate them from other variables defined in the program.
+<VALUE> is a placeholder for the value that <VAR_NAME> takes.
+#define is a preprocessor directive.
+Before the compilation of the program, the preprocessor replaces all occurrences of <VAR_NAME> with <VALUE>.
+
+
+In C, the preprocessors process the source code ahead of compilation to produce the expanded source code. This is illustrated below.
+C Preprocessor
+
+
+It's a good practice to include the definition of all constants after the header files in your program, as shown below:
+#include <stdio.h>
+
+#define CONSTANT_1 VALUE_1
+#define CONSTANT_2 VALUE_2
+//
+
+int main()
+    {
+        //statements here
+    }
+
+
+ In the next section, you'll see an example using #define to declare C constants.
+
+
+How to Declare Constants Using #define Example
+Consider the following code snippet, where you have two constants STUDENT_ID and COURSE_CODE.
+#include <stdio.h>
+#define STUDENT_ID 27
+#define COURSE_CODE 502
+
+int main()
+{
+    printf("Student ID: %d is taking the class %d\n", STUDENT_ID,COURSE_CODE);
+
+    return 0;
+}
+
+
+# Output
+Student ID: 27 is taking the class 502
+
+
+In this example:
+
+The preprocessor replaces STUDENT_ID and COURSE_CODE by 27, and 502, respectively. So the body of the main() function will now be:
+int main()
+{
+    printf("Student ID: %d is taking the class %d\n", 27, 502);
+
+    return 0;
+}
+
+
+
+
+As the printf() function can print out formatted strings, the two occurrences of the format specifiers %d (for decimal integers) are replaced by 27 and 502.
+Although #define lets you define constants, you should be careful not to redefine them elsewhere in the program.
+For example, the code below, you've redefined STUDENT_ID. And it will compile and execute without errors.
+
+#include <stdio.h>
+#define STUDENT_ID 27
+#define STUDENT_ID 207 //redefinition of a #define constant.
+#define COURSE_CODE 502
+
+int main()
+{
+    printf("Student ID: %d is taking the class %d\n", STUDENT_ID,COURSE_CODE);
+
+    return 0;
+}
+
+
+
+
+
+Depending on your compiler, you may get a warning that you're trying to redefine an already-defined constant.
+
+
+
+And the value in the most recent definition will be used.
+
+Notice how the redefined value of 207 has been used as the STUDENT_ID, overwriting the previously defined value 27.
+
+
+
+So you now know that the #define constants are in some sense not true constants as you can always redefine them.
+
+Head on to the next section to learn about the const qualifier.
+
+
+
+
+
+
+
+How to Use the const Qualifier to Define Constants in C
+
+In C, <data_type> <var_name> = <value> is the syntax to declare a variable <var_name> of type <data_type>, and to assign it the value <value>.
+
+To make <var_name> a constant, you only need to add the const qualifier to this statement as follows:
+
+
+const <data_type> <var_name> = <value>;
+
+Adding the const keyword in the definition of the variable ensures that its value remains unchanged in the program.
+The const qualifier makes the variable read-only. And trying to modify it elsewhere in the program will throw errors during compilation.
+
+
+ Head on to the next section to modify the previous example using const.
+
+
+
+
+
+
+
+How to Declare Constants Using const Qualifier Example
+From the previous example, you have the constants STUDENT_ID and COURSE_CODE. Now you'll define them as constants using the const qualifier.
+
+Since they're both integers, you can define them to be of the int data type, taking the intended values: 27 and 502.
+Include the qualifier const in the respective definitions.
+
+This is shown in the code snippet below:
+
+#include <stdio.h>
+
+int main()
+{
+    const int STUDENT_ID = 27;
+    const int COURSE_CODE = 502;
+    printf("Student ID: %d is taking the class %d\n", STUDENT_ID, COURSE_CODE);
+
+    return 0;
+}
+
+# Output
+Student ID: 27 is taking the class 502
+
+
+You can see that the code works as expected.
+
+In C, you cannot redefine an existing variable.
+For example, if int my_var = 2 is the first definition, your program won't compile successfully if you try redefining my_var as int my_var = 3.
+
+However, you can always reassign values of a variable.
+This means that if int my_var = 2 is the definition, you can assign a different value to my_var using a simple assignment statement like my_var = 3.
+
+Let's now try modifying the const variable STUDENT_ID.
+
+#include <stdio.h>
+
+int main()
+{
+    const int STUDENT_ID = 27;
+    STUDENT_ID = 207; // modifying a true constant: NOT POSSIBLE
+    const int COURSE_CODE = 502;
+    printf("Student ID: %d is taking the class %d\n", STUDENT_ID, COURSE_CODE);
+
+    return 0;
+}
+
+
+You'll see that the program doesn't compile successfully.
+
+And the error message reads: error: assignment of read-only variable 'student_id' meaning that you can only read the value of STUDENT_ID and not assign a value to it.
+
+
+
+Thus the const qualifier renders a true constant that's immune to changes, and cannot be altered during the execution of the program.
+
+
+Conclusion
+In this tutorial, you've learned how to define constants:
+
+using the #define preprocessor directive with the syntax #define <VAR_NAME> <VALUE>, and
+using the const qualifier to render variables to be read-only.
+Hope you found this tutorial helpful. Happy coding!😄
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+REFERENCE: https://www.freecodecamp.org/news/constants-in-c-explained-how-to-use-define-and-const-keyword/
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------
+
+/*
+STUDY  argc |  argv
+
+int argc, char *argv[]
+
+
+
+
+
+*/
+
+
+
+
+
+/*
+Argumentos em linha de comando
+
+Por: Eduardo Casavella
+Em linguagem C podemos passar argumentos através da linha de comando para um programa quando ele inicia.
+
+
+A função main recebe parâmetros passados via linha de comando como vemos a seguir:
+int main( int argc, char *argv[ ] )
+
+Onde:
+
+argc – é um valor inteiro que indica a quantidade de argumentos que foram passados ao chamar o programa.
+
+argv – é um vetor de char que contém os argumentos, um para cada string passada na linha de comando.
+
+argv[0] arma zena o nome do programa que foi chamado no prompt, sendo assim, argc é pelo menos igual a 1, pois no mínimo existirá um argumento.
+
+
+
+Os argumentos passados por linha de comando devem ser separados por um espaço ou tabulação.
+
+Exemplo: Programa que conta e mostra os argumentos recebidos na linha de comando.
+
+    #include <stdio.h>
+    int main( int argc, char *argv[ ] )
+    {
+    int cont;
+    
+    for(cont=0; cont < argc; cont++)
+        printf("%d Parametro: %s\n", cont,argv[cont]);
+    
+    return 0;
+    }
+
+    vi countArgs.c
+    gcc countArgs.c 
+    ./a.out inicio 1 2 3 fim
+
+Obs: Este programa deve ser salvo em um diretório (no meu caso salvei em C:\teste), compilado e para executar devemos usar o prompt de comando. O programa será chamado a executar diretamente pelo prompt. Para tanto chamamos o programa pelo nome e passamos os argumentos. Veja o exemplo da chamada de execução na primeira linha da figura.
+
+
+Exemplo:
+
+    #include <stdio.h>
+    #include <string.h>
+    #include <stdlib.h> // atoi //
+
+    int main( int argc, char *argv[ ] )
+    {
+    int Resultado, valorA=0, valorB=0;
+    printf("\nMultiplicando valores passados na linha de comando\n");
+    
+    //atoi converte de alfanumérico para inteiro
+    valorA = atoi(argv[1]);
+    valorB = atoi(argv[2]);
+    
+    Resultado = valorA * valorB;
+    printf("\n%d X %d = %d\n",valorA,valorB,Resultado);
+
+    return 0;
+    }
+
+
+    vi multiplicar.c
+    gcc multiplicar.c 
+    ./a.out  9 9
+
+
+
+Tela de execução – Multiplicando valores passados pelo prompt
+
+
+ela de execução multiplicando valores passados pelo prompt
+
+Explicação do código
+
+Os argumentos passados via linha de comando são armazenados em strings, logo é necessário realizar uma conversão usando a função atoi () para transformar os valores a serem multiplicados em números inteiros.
+
+atoi(argv[1]) converte o argumento da posição [1] do vetor argv[] em inteiro.
+
+Depois de converter os argumentos em inteiros efetuamos a multiplicação normalmente.
+Até a próxima!
+
+
+
+
+
+
+
+
+
+
+
+
+REFERENCE: http://linguagemc.com.br/argumentos-em-linha-de-comando/
+*/
+
+
+
+
+
+/*
+
+
+
+REFERENCE: http://www.univasf.edu.br/~marcelo.linder/arquivos_pc/aulas/aula19.pdf
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
