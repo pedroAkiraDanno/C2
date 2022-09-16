@@ -89,6 +89,47 @@ Will use tree2.c like tree command in linux C
 
     2 directories, 9 files
 
+# treeRecursively.c (treeRecursively.c)
+
+Will use treeRecursively.c like find . command in linux C
+
+## STEPS by STEPS on Linux Environment (completed)
+
+    sudo su -
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+
+    cd C2/src/tree/treeFileSystem
+
+
+    gcc -Wall -O2 treeRecursively.c -o treeRecursively
+    #OR
+    gcc treeRecursively.c -o treeRecursively
+
+    ./treeRecursively
+
+## output:
+
+    - treeStudy.c
+    [test]
+    [pdf]
+        - Lec-dynamic-memory.pdf
+        - aula19.pdf
+    - posix_list_files.c
+    - posix_list_files2.c
+    - tree2.c
+    - README.md
+    - treeRecursively2.c
+    - treeRecursively.c
+    - tree.c
+    - treeRecursively
+
 # treeRecursivily2.c (treeRecursivily2.c)
 
 Will use tree2.c like tree command in linux C
