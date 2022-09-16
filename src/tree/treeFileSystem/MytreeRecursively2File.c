@@ -16,8 +16,8 @@ void listdir(char *path, size_t size) {
     fptr = fopen("largefile.txt", "w+"); // "w" defines "writing mode" //create a file 
 
     if (!(dir = opendir(path))) {
-        fprintf(stderr, "path not found: %s: %s\n",
-                path, strerror(errno));
+        fprintf(stderr, "path not found: %s: %s\n",path, strerror(errno));
+        fprintf(fptr, "path not found: %s: %s\n",path, strerror(errno));
         return;
     }
 
@@ -29,6 +29,7 @@ void listdir(char *path, size_t size) {
                 continue;
             if (len + strlen(name) + 2 > size) {
                 fprintf(stderr, "path too long: %s/%s\n", path, name);
+                fprintf(fptr, "path too long: %s/%s\n", path, name);
             } else {
                 path[len] = '/';
                 strcpy(path + len + 1, name);
