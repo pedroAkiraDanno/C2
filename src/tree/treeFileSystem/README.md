@@ -172,6 +172,24 @@ Will use tree2.c like tree command in linux C
     ./treeRecursively.c
     ./tree.c
 
+## output2:
+
+    .
+    ./treeStudy.c
+    ./test
+    ./test/pdf
+    ./test/pdf/Lec-dynamic-memory.pdf
+    ./test/pdf/aula19.pdf
+    ./test/posix_list_files.c
+    ./test/posix_list_files2.c
+    ./treeRecursively2
+    ./tree2.c
+    ./README.md
+    ./treeRecursively2.c
+    ./treeRecursively.c
+    ./tree.c
+    ./treeRecursively
+
 ## REFERENCES:
 
 https://www.sanfoundry.com/c-programming-examples/
