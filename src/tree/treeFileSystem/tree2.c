@@ -22,6 +22,11 @@ typedef struct entry {
 
 
 
+
+
+
+
+//WALK 
 int walk(const char* directory, const char* prefix, counter_t *counter) {
   entry_t *head = NULL, *current, *iter;
   size_t size = 0, index;
@@ -40,7 +45,7 @@ int walk(const char* directory, const char* prefix, counter_t *counter) {
   counter->dirs++;
 
   while ((file_dirent = readdir(dir_handle)) != NULL) {
-    if (file_dirent->d_name[0] == '.') {
+    if (file_dirent->d_name[0] == '.') {    // . is equal current directory 
       continue;
     }
 
@@ -107,6 +112,10 @@ int walk(const char* directory, const char* prefix, counter_t *counter) {
 
 
 
+
+
+
+//MAIN
 int main(int argc, char *argv[]) {
   char* directory = argc > 1 ? argv[1] : ".";
   printf("%s\n", directory);
@@ -145,10 +154,6 @@ output example :
 └── treeStudy.c
 
 2 directories, 9 files
-
-
-
-
 
 
 
