@@ -30,6 +30,11 @@ void listdir(char *path, size_t size) {
             if (!strcmp(name, ".") || !strcmp(name, ".."))
                 continue;
             if (len + strlen(name) + 2 > size) {
+
+                //DEBUG
+                printf("len %d + strlen(name) %d + 2 > size %d ", len, strlen(name), size);
+
+
                 fprintf(stderr, "path too long: %s/%s\n", path, name);
             } else {
                 path[len] = '/';
@@ -51,7 +56,7 @@ int main(void) {
     char path[1024] = ".";
 
     //DEBUG
-    printf("sizeof(path): %zu", sizeof(path));
+    printf("main sizeof(path): %zu", sizeof(path));
 
     listdir(path, sizeof path);
     return 0;
