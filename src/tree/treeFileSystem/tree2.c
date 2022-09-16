@@ -126,6 +126,41 @@ int main(int argc, char *argv[]) {
 
 
 
+/*
+output example :
+
+
+
+.
+├── README.md
+├── rest1
+├── test
+│   ├── Lec-dynamic-memory.pdf
+│   ├── aula19.pdf
+│   ├── posix_list_files.c
+│   └── posix_list_files2.c
+├── tree.c
+├── tree2
+├── tree2.c
+└── treeStudy.c
+
+2 directories, 9 files
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
   /*****************************************************************************************************************
   *                                                   REFERENCES      	                                           
   * https://github.com/kddnewton/tree/blob/main/tree.c

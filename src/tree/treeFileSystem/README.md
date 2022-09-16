@@ -72,6 +72,23 @@ Will use tree2.c like tree command in linux C
 
     ./tree2
 
+## output:
+
+    .
+    ├── README.md
+    ├── rest1
+    ├── test
+    │   ├── Lec-dynamic-memory.pdf
+    │   ├── aula19.pdf
+    │   ├── posix_list_files.c
+    │   └── posix_list_files2.c
+    ├── tree.c
+    ├── tree2
+    ├── tree2.c
+    └── treeStudy.c
+
+    2 directories, 9 files
+
 ## REFERENCES:
 
 https://www.sanfoundry.com/c-programming-examples/
