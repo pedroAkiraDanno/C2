@@ -13,14 +13,19 @@ void listdir(char *path, size_t size) {
     size_t len = strlen(path);
 
     if (!(dir = opendir(path))) {
-        fprintf(stderr, "path not found: %s: %s\n",
-                path, strerror(errno));
+        fprintf(stderr, "path not found: %s: %s\n", path, strerror(errno));
         return;
     }
 
     puts(path);
     while ((entry = readdir(dir)) != NULL) {
         char *name = entry->d_name;
+
+
+        //DEBUG
+        printf("entry->d_name: %s", name);
+
+
         if (entry->d_type == DT_DIR) {
             if (!strcmp(name, ".") || !strcmp(name, ".."))
                 continue;
@@ -44,6 +49,10 @@ void listdir(char *path, size_t size) {
 
 int main(void) {
     char path[1024] = ".";
+
+    //DEBUG
+    printf("sizeof(path): %zu", sizeof(path));
+
     listdir(path, sizeof path);
     return 0;
 }
