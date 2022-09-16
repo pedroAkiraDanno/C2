@@ -23,7 +23,7 @@ void listdir(char *path, size_t size) {
 
 
         //DEBUG
-        printf("entry->d_name: %s", name);
+        printf("entry->d_name: %s\n", name);
 
 
         if (entry->d_type == DT_DIR) {
@@ -90,11 +90,11 @@ git clone https://github.com/pedroAkiraDanno/C2
 cd C2/src/tree/treeFileSystem
 
 
-gcc -Wall -O2 treeRecursively2.c -o treeRecursively2
+gcc -Wall -O2 MytreeRecursively2.c -o MytreeRecursively2
 #OR
-gcc treeRecursively2.c -o treeRecursively2
+gcc MytreeRecursively2.c -o MytreeRecursively2
 
-./treeRecursively2
+./MytreeRecursively2
 
 
 */
