@@ -32,7 +32,11 @@ int main(int argc, char *argv[ ] )
     printf("%lu (double) \n", sizeof(double));
 
     char path[1024] = ".";
-    printf("%lu (path) \n ", sizeof(path));    
+    printf("%lu (path) \n ", sizeof(path));  
+
+    size_t len = strlen(path); 
+    printf("%zu (len) \n ", sizeof(path));   
+
 
   
   return 0;
@@ -46,6 +50,8 @@ output:
 4 (int)
 4 (float)
 8 (double)
+1024 (path)
+
 
 
 */
