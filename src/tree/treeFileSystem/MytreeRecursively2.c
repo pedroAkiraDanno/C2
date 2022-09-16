@@ -66,6 +66,29 @@ README
 
 
 
+/*
+COMPILE:
+
+
+cd ~
+rm -fr C2/
+git clone https://github.com/pedroAkiraDanno/C2
+
+
+//  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+//  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+
+cd C2/src/tree/treeFileSystem
+
+
+gcc -Wall -O2 treeRecursively2.c -o treeRecursively2
+#OR
+gcc treeRecursively2.c -o treeRecursively2
+
+./treeRecursively2
+
+
+*/
 
 
 

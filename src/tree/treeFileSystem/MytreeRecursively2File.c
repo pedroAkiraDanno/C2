@@ -16,7 +16,7 @@ void listdir(char *path, size_t size) {
     fptr = fopen("largefile.txt", "w+"); // "w" defines "writing mode" //create a file 
 
     if (!(dir = opendir(path))) {
-        fprintf(stderr, "path not found: %s: %s\n",path, strerror(errno));
+        //fprintf(stderr, "path not found: %s: %s\n",path, strerror(errno));
         fprintf(fptr, "path not found: %s: %s\n",path, strerror(errno));
         return;
     }
@@ -28,7 +28,7 @@ void listdir(char *path, size_t size) {
             if (!strcmp(name, ".") || !strcmp(name, ".."))
                 continue;
             if (len + strlen(name) + 2 > size) {
-                fprintf(stderr, "path too long: %s/%s\n", path, name);
+                //fprintf(stderr, "path too long: %s/%s\n", path, name);
                 fprintf(fptr, "path too long: %s/%s\n", path, name);
             } else {
                 path[len] = '/';
@@ -88,11 +88,13 @@ COMPILE:
 
 
 vi MytreeRecursively2File.c
-gcc MytreeRecursively2File.c
-./a.out
+gcc MytreeRecursively2File.c -o MytreeRecursively2File
+./MytreeRecursively2File
+
+
 
 echo "" > MytreeRecursively2File.c
-rm largefile.txt a.out
+rm largefile.txt MytreeRecursively2File
 
 
 
