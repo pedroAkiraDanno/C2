@@ -32,10 +32,10 @@ int main(int argc, char *argv[ ] )
     printf("%lu (double) \n", sizeof(double));
 
     char path[1024] = ".";
-    printf("%lu (path) \n ", sizeof(path));  
+    printf("%lu (path) \n", sizeof(path));  
 
     size_t len = strlen(path); 
-    printf("%zu (len) \n ", sizeof(path));   
+    printf("%zu (len) \n", len);   
 
 
   
@@ -82,6 +82,9 @@ COMPILE | README
   gcc test2.c -o test2
 
   ./test2
+
+
+
 
 
 
