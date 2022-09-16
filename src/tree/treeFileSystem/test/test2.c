@@ -29,14 +29,26 @@ int main(int argc, char *argv[ ] )
     printf("%lu (char) \n", sizeof(char));
     printf("%lu (int) \n", sizeof(int));
     printf("%lu (float) \n", sizeof(float));
-    printf("%lu (double) ", sizeof(double));
+    printf("%lu (double) \n ", sizeof(double));
+
+    char path[1024] = ".";
+    printf("%lu (path) \n ", sizeof(path));    
 
   
   return 0;
 }
 
 
+/*
+output: 
 
+1 (char)
+4 (int)
+4 (float)
+8 (double)
+
+
+*/
 
 
 
