@@ -35,7 +35,12 @@ void listdir(char *path, size_t size) {
             if (len + strlen(name) + 2 > size) {
                 fprintf(stderr, "path too long: %s/%s\n", path, name);
             } else {
+
                 path[len] = '/';
+
+                //DEBUG
+                printf("IMPORTANT path[len] %s",  path[len]);
+
                 strcpy(path + len + 1, name);
                 listdir(path, size);
                 path[len] = '\0';
