@@ -26,10 +26,10 @@
 int main(int argc, char *argv[ ] )
 {
 
-    printf("%lu\n", sizeof(char));
-    printf("%lu\n", sizeof(int));
-    printf("%lu\n", sizeof(float));
-    printf("%lu", sizeof(double));
+    printf("%lu (char) \n", sizeof(char));
+    printf("%lu (int) \n", sizeof(int));
+    printf("%lu (float) \n", sizeof(float));
+    printf("%lu (double) ", sizeof(double));
 
   
   return 0;
@@ -53,10 +53,10 @@ COMPILE | README
   rm -fr C2/
   git clone https://github.com/pedroAkiraDanno/C2
 
-  //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-  //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+  //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem/test
+  //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem/test
 
-  cd C2/src/tree/treeFileSystem
+  cd C2/src/tree/treeFileSystem/test
 
 
   gcc -Wall -O2 test2.c -o test2
