@@ -19,7 +19,7 @@
 #include <sys/types.h>
 //included so we can use the opendir, readdir and closedir functions
 #include <dirent.h>
-#include <string>
+#include <string.h>
 
 
 
