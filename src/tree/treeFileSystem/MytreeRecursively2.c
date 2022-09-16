@@ -29,12 +29,10 @@ void listdir(char *path, size_t size) {
         if (entry->d_type == DT_DIR) {
             if (!strcmp(name, ".") || !strcmp(name, ".."))
                 continue;
+
+            //DEBUG
+            printf("len %ld + strlen(name) %zu + 2 > size %zu ", len, strlen(name), size);                
             if (len + strlen(name) + 2 > size) {
-
-                //DEBUG
-                printf("len %ld + strlen(name) %zu + 2 > size %zu ", len, strlen(name), size);
-
-
                 fprintf(stderr, "path too long: %s/%s\n", path, name);
             } else {
                 path[len] = '/';
