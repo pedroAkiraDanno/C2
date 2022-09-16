@@ -32,7 +32,7 @@ void listdir(char *path, size_t size) {
             if (len + strlen(name) + 2 > size) {
 
                 //DEBUG
-                printf("len %d + strlen(name) %d + 2 > size %d ", len, strlen(name), size);
+                printf("len %d + strlen(name) %d + 2 > size %zu ", len, strlen(name), size);
 
 
                 fprintf(stderr, "path too long: %s/%s\n", path, name);
