@@ -39,9 +39,10 @@ void listdir(char *path, size_t size) {
                 path[len] = '/';
 
                 //DEBUG
-                printf("IMPORTANT path[len] %d",  path[len]);
+                printf("IMPORTANT path[len] %d \n",  path[len]);
 
-                strcpy(path + len + 1, name);
+                strcpy(path + len + 1, name); //char *strcpy(char *dest, const char *src)
+
                 listdir(path, size);
                 path[len] = '\0';
             }
