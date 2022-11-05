@@ -76,7 +76,7 @@ void postorder();
 void preorder();
 struct node *smallest_node(struct node *);
 struct node *largest_node(struct node *);
-int get_data();
+/* int get_data(); */
 int countnodes(struct node *);
 long long int calculateSum(struct node *);
 int nonleafnodes(struct node* );
@@ -322,14 +322,14 @@ void postorder(struct node *root)
 }
  
 // getting data from the user
-int get_data()
+/* int get_data()
 {
     int data;
     printf("\nEnter Data: ");
     scanf("%d", &data);
     return data;
 }
-
+ */
 
 //Count the Number of Nodes in Binary Tree
 int countnodes(struct node *root)

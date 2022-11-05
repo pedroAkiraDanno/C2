@@ -13,12 +13,14 @@
 
 #include <stdio.h>
 #include <sys/types.h>
+#include <stdlib.h>
+
 
 
 // included so we can use the opendir, readdir and closedir functions
 #include <dirent.h>
 
-int main(void)
+int main(int argc, char *argv[])
 {
   // directory stream variable for accessing the directory
   DIR *directory;
@@ -74,8 +76,56 @@ int main(void)
 
 
 
+
+
+
+
+
+
+
+
+/*
+REFERENCES: 
+
+
+  https://www.youtube.com/watch?v=vbAfIGR_5XM
+  https://cs.petrsu.ru/~vadim/unix2006/glibc/Opening-a-Directory.html
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 COMPILE | README 
+
+
+---
+man opendir
+//       The opendir() function opens a directory stream corresponding to the directory name, and returns a pointer to the directory stream.  The stream is positioned at the first entry in the directory.
+
+
+
+man readdir
+
+
 
 
 
@@ -86,7 +136,66 @@ cat /usr/include/x86_64-linux-gnu/bits/dirent.h
 
 
 
+
+
+
+vi posix_list_files.c
+
+gcc posix_list_files.c
+./a.out
+
+
+
+
+
+
+
+
+
 */
+
+
+
+
+
+
+/*
+STUDY 
+
+
+
+
+glibc
+https://github.com/bminor/glibc/blob/595c22ecd8e87a27fd19270ed30fdbae9ad25426/conform/data/dirent.h-data
+
+
+
+opaque pointer in C
+https://stackoverflow.com/questions/7553750/what-is-an-opaque-pointer-in-c
+
+
+
+
+glibc/sysdeps/unix/sysv/linux/opendir.c
+https://github.com/bminor/glibc/blob/b92a49359f33a461db080a33940d73f47c756126/sysdeps/unix/sysv/linux/opendir.c
+
+
+
+https://www.mkssoftware.com/docs/man3/opendir.3.asp
+
+https://pubs.opengroup.org/onlinepubs/007908799/xsh/readdir.html
+
+
+
+
+. is a directory entry for current directory
+
+.. is a directory entry for the directory one level up in hierarchy
+
+*/
+
+
+
 
 
 
