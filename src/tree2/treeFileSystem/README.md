@@ -97,9 +97,9 @@ Will use tree2.c like tree command in linux C
 
 ---
 
-# treeRecursively.c (treeRecursively.c)
+# MytreeRecursively.c (treeRecursively.c)
 
-Will use treeRecursively.c like find . command in linux C
+Will use MytreeRecursively.c like find . command in linux C
 
 ## STEPS by STEPS on Linux Environment (completed)
 
@@ -110,17 +110,17 @@ Will use treeRecursively.c like find . command in linux C
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree2   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
 
-    cd C2/src/tree/treeFileSystem
+    cd C2/src/tree2/treeFileSystem
 
 
-    gcc -Wall -O2 treeRecursively.c -o treeRecursively
+    gcc -Wall -O2 MytreeRecursively.c -o MytreeRecursively
     #OR
-    gcc treeRecursively.c -o treeRecursively
+    gcc MytreeRecursively.c -o MytreeRecursively
 
-    ./treeRecursively
+    ./MytreeRecursively
 
 ## output:
 
