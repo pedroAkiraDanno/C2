@@ -47,7 +47,7 @@ begin:
 
     ./bst3
 
-# tree2.c (tree.c)
+# Mytree2.c (tree.c)
 
 Will use tree2.c like tree command in linux C
 
@@ -60,17 +60,17 @@ Will use tree2.c like tree command in linux C
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree2   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
 
-    cd C2/src/tree/treeFileSystem
+    cd C2/src/tree2/treeFileSystem
 
 
-    gcc -Wall -O2 tree2.c -o tree2
+    gcc -Wall -O2 Mytree2.c -o Mytree2
     #OR
-    gcc tree2.c -o tree2
+    gcc Mytree2.c -o Mytree2
 
-    ./tree2
+    ./Mytree2
 
 ## output:
 
@@ -91,6 +91,7 @@ Will use tree2.c like tree command in linux C
 
 ## REFERENCE:
 
+    bkp_original -> tree.c obs: is the original file
     zip -> tree-main.zip
     https://github.com/kddnewton/tree/blob/main/tree.c
 
