@@ -89,6 +89,13 @@ Will use tree2.c like tree command in linux C
 
     2 directories, 9 files
 
+## REFERENCE:
+
+    zip -> tree-main.zip
+    https://github.com/kddnewton/tree/blob/main/tree.c
+
+---
+
 # treeRecursively.c (treeRecursively.c)
 
 Will use treeRecursively.c like find . command in linux C

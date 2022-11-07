@@ -48,9 +48,9 @@ int main(void) {
 
 /*
 REFERENCE: 
-https://stackoverflow.com/questions/8436841/how-to-recursively-list-directories-in-c-on-linux
+    https://stackoverflow.com/questions/8436841/how-to-recursively-list-directories-in-c-on-linux
 
-On my system, its output is exactly identical to that of find .
+    On my system, its output is exactly identical to that of find .
 
 
 
