@@ -201,6 +201,10 @@ Will use tree2.c like tree command in linux C
     ./tree.c
     ./treeRecursively
 
+## REFERENCE:
+
+    https://stackoverflow.com/questions/8436841/how-to-recursively-list-directories-in-c-on-linux
+
 ---
 
 ## REFERENCES GLOBAL:
