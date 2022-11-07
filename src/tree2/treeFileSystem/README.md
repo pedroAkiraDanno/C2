@@ -140,7 +140,7 @@ Will use MytreeRecursively.c like find . command in linux C
 
 ---
 
-# treeRecursivily2.c (treeRecursivily2.c) \*\*MOST IMPORTAT
+# MytreeRecursively2.c (treeRecursivily2.c) \*\*MOST IMPORTAT
 
 Will use tree2.c like tree command in linux C
 
@@ -153,17 +153,17 @@ Will use tree2.c like tree command in linux C
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree2   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
 
-    cd C2/src/tree/treeFileSystem
+    cd C2/src/tree2/treeFileSystem
 
 
-    gcc -Wall -O2 treeRecursively2.c -o treeRecursively2
+    gcc -Wall -O2 MytreeRecursively2.c -o MytreeRecursively2
     #OR
-    gcc treeRecursively2.c -o treeRecursively2
+    gcc MytreeRecursively2.c -o MytreeRecursively2
 
-    ./treeRecursively2
+    ./MytreeRecursively2
 
 ## output:
 
