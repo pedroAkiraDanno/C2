@@ -1,6 +1,6 @@
 # Create binary Seach Tree in C
 
-Program to binary Seach Tree in C
+Program to Tree in C
 
 ### STEPS on Linux Environment
 
