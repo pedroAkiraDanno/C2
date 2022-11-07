@@ -60,7 +60,7 @@ int main(void) {
     char path[1024] = ".";
 
     //DEBUG
-    printf("main sizeof(path): %zu", sizeof(path));
+    //printf("main sizeof(path): %zu", sizeof(path));
 
     listdir(path, sizeof path);
     return 0;
