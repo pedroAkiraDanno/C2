@@ -87,14 +87,14 @@ README
 COMPILE:
 
 
-vi MytreeRecursively2File.c
-gcc MytreeRecursively2File.c -o MytreeRecursively2File
-./MytreeRecursively2File
+    vi MytreeRecursively2File.c
+    gcc MytreeRecursively2File.c -o MytreeRecursively2File
+    ./MytreeRecursively2File
 
 
 
-echo "" > MytreeRecursively2File.c
-rm largefile.txt MytreeRecursively2File
+    echo "" > MytreeRecursively2File.c
+    rm largefile.txt MytreeRecursively2File
 
 
 
