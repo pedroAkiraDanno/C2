@@ -147,6 +147,7 @@ Will use tree2.c like tree command in linux C
 ## STEPS by STEPS on Linux Environment (completed)
 
     sudo su -
+    sudo apt-get update && sudo apt-get upgrade -y
     sudo apt-get install gcc -y
 
     cd ~

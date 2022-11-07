@@ -23,7 +23,7 @@ void listdir(char *path, size_t size) {
 
 
         //DEBUG
-        printf("entry->d_name: %s\n", name);
+        //printf("entry->d_name: %s\n", name);
 
 
         if (entry->d_type == DT_DIR) {
@@ -31,7 +31,7 @@ void listdir(char *path, size_t size) {
                 continue;
 
             //DEBUG
-            printf("len %ld + strlen(name) %zu + 2 > size %zu ", len, strlen(name), size);                
+            //printf("len %ld + strlen(name) %zu + 2 > size %zu ", len, strlen(name), size);                
             if (len + strlen(name) + 2 > size) {
                 fprintf(stderr, "path too long: %s/%s\n", path, name);
             } else {
@@ -39,7 +39,7 @@ void listdir(char *path, size_t size) {
                 path[len] = '/';
 
                 //DEBUG
-                printf("IMPORTANT path[len] %d \n",  path[len]);
+                //printf("IMPORTANT path[len] %d \n",  path[len]);
 
                 strcpy(path + len + 1, name); //char *strcpy(char *dest, const char *src)
 
@@ -88,22 +88,22 @@ README
 COMPILE:
 
 
-cd ~
-rm -fr C2/
-git clone https://github.com/pedroAkiraDanno/C2
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
 
 
-//  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-//  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
 
-cd C2/src/tree/treeFileSystem
+    cd C2/src/tree/treeFileSystem
 
 
-gcc -Wall -O2 MytreeRecursively2.c -o MytreeRecursively2
-#OR
-gcc MytreeRecursively2.c -o MytreeRecursively2
+    gcc -Wall -O2 MytreeRecursively2.c -o MytreeRecursively2
+    #OR
+    gcc MytreeRecursively2.c -o MytreeRecursively2
 
-./MytreeRecursively2
+    ./MytreeRecursively2
 
 
 */
