@@ -140,7 +140,7 @@ Will use MytreeRecursively.c like find . command in linux C
 
 ---
 
-# MytreeRecursively2.c (treeRecursivily2.c) \*\*MOST IMPORTAT
+# MytreeRecursively2.c (treeRecursivily2.c)
 
 Will use tree2.c like tree command in linux C
 
