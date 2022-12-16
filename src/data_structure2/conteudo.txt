@@ -1,0 +1,365 @@
+
+
+
+
+Conteudo: Data structure
+
+-Pilha estatica
+-Fila  estatica
+-Lista estatica
+
+-Pilha dinamica
+-Fila  dinamica
+-Lista dinamica
+
+-busca binaria
+
+-arvore binaria
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Árvore binária
+Árvore de busca binária
+Árvore AVL
+Árvore ordenada
+Árvore rubro-negra
+Árvore 2-3
+Árvore 2-3-4
+Árvore B
+Árvore B+
+Árvore hiperbólica
+Topologia em árvore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-Estatica e Dinamica 
+-TAD
+
+
+-Lista:
+    -estatica
+    -dinamica 
+    -Sequencial
+    -Encadeada
+    -Duplamente
+    -Encadeada
+    -Encadeada
+    -Circular
+    -Encadeada com nó descritor 
+
+
+-Fila:
+    -Dinâmica
+    -Estática
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TAD: Ponto,  Complexos
+
+Lista: Sequencial, Encadeada, Duplamente Encadeada, Encadeada Circular, Encadeada com nó descritor 
+
+Fila: Dinâmica, Estática
+
+Fila de Prioridades: Usando Array Ordenado, Usando Heap
+
+Pilha: Sequencial, Dinâmica
+
+Busca e Ordenação: Código Fonte
+Ordenação Externa: Código Fonte
+
+Grafo: Código Fonte
+
+Árvore: Binária, AVL, Rubro-Negra
+
+Tabela Hash: Código Fonte
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Linguagem C
+
+[C]Lista 1 – Variáveis e Expressões
+[C]Lista 2 – Comandos Condicionais
+[C]Lista 3 – Comandos de Repetição
+[C]Lista 4 – Vetores e Matrizes
+[C]Lista 5 – Strings
+[C]Lista 6 – Structs
+[C]Lista 7 – Funções
+[C]Lista 8 – Recursao
+[C]Lista 9 – Ponteiros
+[C]Lista 10 – Alocação Dinâmica
+[C]Lista 11 – Arquivos
+
+Estrutura de dados
+
+[ED]Lista 1 – Tipo abstrato de dado – Tad
+[ED]Lista 2 – Análise de Complexidade
+[ED]Lista 3 – Busca e Ordenação
+[ED]Lista 4 – Listas
+[ED]Lista 5 – Filas
+[ED]Lista 6 – Pilhas
+[ED]Lista 7 – Grafos
+[ED]Lista 8 – Arvores
+[ED]Lista 9 – Tabela Hash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://programacaodescomplicada.wordpress.com/complementar/

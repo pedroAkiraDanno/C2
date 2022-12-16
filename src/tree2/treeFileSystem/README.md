@@ -1,6 +1,6 @@
-# Create binary Seach Tree in C
+# Create Tree in C
 
-Program to binary Seach Tree in C
+Program to Tree in C
 
 ### STEPS on Linux Environment
 
@@ -47,7 +47,7 @@ begin:
 
     ./bst3
 
-# tree2.c (tree.c)
+# Mytree2.c (tree.c)
 
 Will use tree2.c like tree command in linux C
 
@@ -60,17 +60,17 @@ Will use tree2.c like tree command in linux C
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree2   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
 
-    cd C2/src/tree/treeFileSystem
+    cd C2/src/tree2/treeFileSystem
 
 
-    gcc -Wall -O2 tree2.c -o tree2
+    gcc -Wall -O2 Mytree2.c -o Mytree2
     #OR
-    gcc tree2.c -o tree2
+    gcc Mytree2.c -o Mytree2
 
-    ./tree2
+    ./Mytree2
 
 ## output:
 
@@ -89,9 +89,17 @@ Will use tree2.c like tree command in linux C
 
     2 directories, 9 files
 
-# treeRecursively.c (treeRecursively.c)
+## REFERENCE:
 
-Will use treeRecursively.c like find . command in linux C
+    bkp_original -> tree.c obs: is the original file
+    zip -> tree-main.zip
+    https://github.com/kddnewton/tree/blob/main/tree.c
+
+---
+
+# MytreeRecursively.c (treeRecursively.c)
+
+Will use MytreeRecursively.c like find . command in linux C
 
 ## STEPS by STEPS on Linux Environment (completed)
 
@@ -102,17 +110,17 @@ Will use treeRecursively.c like find . command in linux C
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree2   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
 
-    cd C2/src/tree/treeFileSystem
+    cd C2/src/tree2/treeFileSystem
 
 
-    gcc -Wall -O2 treeRecursively.c -o treeRecursively
+    gcc -Wall -O2 MytreeRecursively.c -o MytreeRecursively
     #OR
-    gcc treeRecursively.c -o treeRecursively
+    gcc MytreeRecursively.c -o MytreeRecursively
 
-    ./treeRecursively
+    ./MytreeRecursively
 
 ## output:
 
@@ -130,30 +138,33 @@ Will use treeRecursively.c like find . command in linux C
     - tree.c
     - treeRecursively
 
-# treeRecursivily2.c (treeRecursivily2.c) \*\*MOST IMPORTAT
+---
+
+# MytreeRecursively2.c (treeRecursivily2.c)
 
 Will use tree2.c like tree command in linux C
 
 ## STEPS by STEPS on Linux Environment (completed)
 
     sudo su -
+    sudo apt-get update && sudo apt-get upgrade -y
     sudo apt-get install gcc -y
 
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
 
-    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
-    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout feature/tree2   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
+    //  cd ~   ;   	cd C2 	; 	git checkout develop   ;      cd ~  ;     cd C2/src/tree2/treeFileSystem
 
-    cd C2/src/tree/treeFileSystem
+    cd C2/src/tree2/treeFileSystem
 
 
-    gcc -Wall -O2 treeRecursively2.c -o treeRecursively2
+    gcc -Wall -O2 MytreeRecursively2.c -o MytreeRecursively2
     #OR
-    gcc treeRecursively2.c -o treeRecursively2
+    gcc MytreeRecursively2.c -o MytreeRecursively2
 
-    ./treeRecursively2
+    ./MytreeRecursively2
 
 ## output:
 
@@ -190,7 +201,13 @@ Will use tree2.c like tree command in linux C
     ./tree.c
     ./treeRecursively
 
-## REFERENCES:
+## REFERENCE:
+
+    https://stackoverflow.com/questions/8436841/how-to-recursively-list-directories-in-c-on-linux
+
+---
+
+## REFERENCES GLOBAL:
 
 https://www.sanfoundry.com/c-programming-examples/
 
