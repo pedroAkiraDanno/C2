@@ -85,11 +85,12 @@ Node *treeRemove(Node *root);
 
 /*main*/
 int main(){
+	
 	Node *root = tree_initialize();	
 	root = tree_insert(root, 10);
-    root = tree_insert(root, 15);
+  root = tree_insert(root, 15);
 	root = tree_insert(root, 5);
-    root = tree_insert(root, 12);
+  root = tree_insert(root, 12);
 
 	tree_print(root);
 
