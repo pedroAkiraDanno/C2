@@ -53,7 +53,8 @@ int main(void)
 	cd ~
 	rm -fr C2/
 	git clone https://github.com/pedroAkiraDanno/C2
-	cd C2/
+	cd  C2/ ;     git checkout develop ; cd ..
+	cd  C2/
 
 
 	gcc -Wall -O2 BASE.c -o BASE
