@@ -71,17 +71,27 @@ int main(void)
 	#apt list --upgradable	
 
 
-	cd ~
-	rm -fr C2/
-	git clone https://github.com/pedroAkiraDanno/C2
-	cd C2/data_structure2/
 
 
-	gcc -Wall -O2 binary_search2.c -o binary_search2
-	#OR
-	gcc binary_search2.c -o binary_search2
 
-	./binary_search2
+
+
+		cd ~
+		rm -fr C2/
+		git clone https://github.com/pedroAkiraDanno/C2
+		cd C2/   /  git checkout develop ; cd ..
+		cd C2/data_structure2/
+
+
+
+
+
+
+		gcc -Wall -O2 binary_search2.c -o binary_search2
+		#OR
+		gcc binary_search2.c -o binary_search2
+
+		./binary_search2
 
 
 
