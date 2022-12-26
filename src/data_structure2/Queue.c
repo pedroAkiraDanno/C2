@@ -160,4 +160,110 @@ void peek()
   }
 }
 
+
+/*
+Output: 
+
+*** Queue  Implementation using Array***
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 3
+Queue is Empty!!!
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 1
+Enter a value to be add: 10
+10 is added to the Queue
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 1
+Enter a value to be add: 20
+20 is added to the Queue
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 1
+Enter a value to be add: 30
+30 is added to the Queue
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 1
+ERROR: Queue is Overflow!!!
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 3
+Queue elements are:
+10  20  30  
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 2
+10 is deleted
+
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 2
+20 is deleted
+
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 2
+30 is deleted
+
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 1
+Enter a value to be add: 15
+15 is added to the Queue
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 4
+Top Element is 15
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice: 3
+Queue elements are:
+15  
+
+1. Enqueue
+2. Dequeue
+3. Display all the Elements
+4. Peek Top element
+Enter the Choice:
+*/
+
+
 //reference: https://embetronicx.com/tutorials/p_language/c/queue-in-c/
