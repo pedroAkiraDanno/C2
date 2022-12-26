@@ -121,4 +121,47 @@ void traverse(){
     }
 }
 
+
+
+
+/*
+output: 
+
+Stack Operation 
+Enter `1` for  Push Operation 
+Enter `2` for  Pop Operation 
+Enter `3` for  atTop Operation 
+Enter `4` for  Traverse Operation 
+Enter `5` for  Quit Operation 
+Enter your choice : 2
+Your stack is underflowStack Operation 
+Enter `1` for  Push Operation 
+Enter `2` for  Pop Operation 
+Enter `3` for  atTop Operation 
+Enter `4` for  Traverse Operation 
+Enter `5` for  Quit Operation 
+Enter your choice : 1
+Enter a integer value : 5678
+5678 has been pushed 
+Stack Operation 
+Enter `1` for  Push Operation 
+Enter `2` for  Pop Operation 
+Enter `3` for  atTop Operation 
+Enter `4` for  Traverse Operation 
+Enter `5` for  Quit Operation 
+Enter your choice : 2
+Last popped item : 5678
+Stack Operation 
+Enter `1` for  Push Operation 
+Enter `2` for  Pop Operation 
+Enter `3` for  atTop Operation 
+Enter `4` for  Traverse Operation 
+Enter `5` for  Quit Operation 
+Enter your choice : 5
+
+*/
+
+
+
+
 //reference: https://www.stechies.com/stack-in-c/
