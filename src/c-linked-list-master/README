@@ -11,3 +11,9 @@ TODO:
 - add CuTest to project
 - create some simple test in separate directory 
 - main function should do nothing except run the tests, but should allow option not to run the tests (which will do nothing for the moment)
+
+
+
+
+
+#reference: https://github.com/skorks/c-linked-list
