@@ -47,11 +47,11 @@ begin:
     		cd C2/src/file/
 
 
-    	gcc -Wall -O2 mycreatelargefile.c -o mycreatelargefile
-    	#OR
-    	gcc mycreatelargefile.c -o mycreatelargefile
+            gcc -Wall -O2 mycreatelargefile.c -o mycreatelargefile
+            #OR
+            gcc mycreatelargefile.c -o mycreatelargefile
 
-    	./mycreatelargefile
+            ./mycreatelargefile
 
 ---
 
