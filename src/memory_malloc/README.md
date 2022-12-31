@@ -71,11 +71,11 @@ Use malloc and realloc and show the memory address just to test
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/memory_malloc/
 
-    	gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
-    	#OR
-    	gcc memory_malloc2.c -o memory_malloc2
+    gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
+    #OR
+    gcc memory_malloc2.c -o memory_malloc2
 
-    	./memory_malloc2
+    ./memory_malloc2
 
 # memory_malloc3.c
 
