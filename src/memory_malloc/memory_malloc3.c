@@ -73,6 +73,8 @@ int main()
         // Get the new size for the array
         n = 900000000;
         printf("\n\nEnter the new size of the array: %d\n", n);
+
+        sleep(10);
  
         // Dynamically re-allocate memory using realloc()
         ptr = realloc(ptr, n * sizeof(int));
@@ -89,7 +91,7 @@ int main()
             ptr[i] = i + 1;
         }
  
-		sleep(8);
+		sleep(10);
 
         // Print the elements of the array
         //printf("The elements of the array are: ");
