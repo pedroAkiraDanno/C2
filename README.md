@@ -20,20 +20,21 @@ begin:
         cpu_high_load_100%
         data_structure
         data_structure2
-        [file](https://github.com/pedroAkiraDanno/C2/src/file/)
-        hash_table
-        hasing
-        heap
-        linked-list
-        memory_malloc
-        q_sort
-        random
-        Searching
-        sort
-        Sort2
-        Sorting
-        tree
-        tree2
+
+[file](https://github.com/pedroAkiraDanno/C2/src/file/)
+hash_table
+hasing
+heap
+linked-list
+memory_malloc
+q_sort
+random
+Searching
+sort
+Sort2
+Sorting
+tree
+tree2
 
 ---
 
