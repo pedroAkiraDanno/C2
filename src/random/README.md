@@ -46,6 +46,7 @@ This program just a simple example of random - it not the complex random program
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/random/
 
 
@@ -86,6 +87,7 @@ NEED USE ranstr4.h include
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/random/
 
 
@@ -127,6 +129,44 @@ This program just a simple example of random - it not the complex random program
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
+    cd C2/src/random/
+
+
+
+    gcc -Wall -O2 rannum2.c -o rannum2
+    #OR
+    gcc ranstr4.c -o rannum2
+
+    ./rannum2
+
+## Example output & Run :
+
+    	root@instance-20220608-2248:~/C2/src/q_sort# ./rannum2
+    		978664932
+    		48329229
+    		1774724142
+    		938360505
+    		458442484
+
+---
+
+# rannum2-INT_MAX.c
+
+Program to create a random with INT_MAX(+2147483647) number
+
+**obs:.**
+This program just a simple example of random - it not the complex random program
+
+## STEPS by STEPS on Linux Environment (completed)
+
+    sudo su -
+    sudo apt-get install gcc -y
+
+    cd ~
+    rm -fr C2/
+    git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/random/
 
 
