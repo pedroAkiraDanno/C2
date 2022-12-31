@@ -140,6 +140,7 @@ Will create a File with size of 60MB with 10 words and each word was 5 caractere
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/q_sort/string/
 
     cp ranstr4.h		 /usr/include
