@@ -46,6 +46,7 @@ This program just a simple example of random - it not the complex random program
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/random/
 
 
@@ -86,6 +87,7 @@ NEED USE ranstr4.h include
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/random/
 
 
@@ -127,6 +129,7 @@ This program just a simple example of random - it not the complex random program
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/random/
 
 
