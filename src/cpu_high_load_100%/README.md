@@ -74,6 +74,7 @@ Use malloc and realloc and show the memory address just to test
     cd C2/ ; git checkout develop ; cd ..
     cd C2/srv/cpu_high_load_100%/
 
+
     gcc -fopenmp cpu_intensive2.c  -o  cpu_intensive2
 
     ./cpu_intensive2
