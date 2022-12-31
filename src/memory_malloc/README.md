@@ -46,6 +46,7 @@ Will create a Memory with 3 GB
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/memory_malloc/
 
     gcc -Wall -O2 memory_malloc.c -o memory_malloc
@@ -69,6 +70,7 @@ Use malloc and realloc and show the memory address just to test
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/memory_malloc/
 
     gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
