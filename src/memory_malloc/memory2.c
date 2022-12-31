@@ -39,7 +39,7 @@ int main() {
       else
         printf("Error in getrusage. errno = %d\n", errno);
       
-	    sleep(5);
+	    sleep(8);
    }
    return 0;
 }

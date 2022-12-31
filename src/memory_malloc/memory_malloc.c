@@ -69,7 +69,7 @@ int main()
 		}
 
 
-		sleep(2);
+		sleep(5);
 
 
 		// Print the elements of the array

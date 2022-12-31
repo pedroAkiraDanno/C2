@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h> //to sleep function
 
 
 int main () {
@@ -40,6 +41,9 @@ int main () {
    str = (char *) realloc(str, 25);
    strcat(str, ".com");
    printf("String = %s,  Address = %u\n", str, str);
+
+
+	 sleep(8);
 
    free(str);
    
