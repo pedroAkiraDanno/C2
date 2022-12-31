@@ -47,7 +47,7 @@ Will create a Memory with 3 GB
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/ ; git checkout develop ; cd ..
-    cd C2/memory_malloc/
+    cd C2/src/memory_malloc/
 
     gcc -Wall -O2 memory_malloc.c -o memory_malloc
     #OR
@@ -71,7 +71,7 @@ Use malloc and realloc and show the memory address just to test
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/ ; git checkout develop ; cd ..
-    cd C2/memory_malloc/
+    cd C2/src/memory_malloc/
 
     gcc -Wall -O2 memory_malloc2.c -o memory_malloc2
     #OR
@@ -95,7 +95,7 @@ Will create a Memory with 1 GB realloc(expand) to Size : 3 GB
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/ ; git checkout develop ; cd ..
-    cd C2/memory_malloc/
+    cd C2/src/memory_malloc/
 
     gcc -Wall -O2 memory_malloc3.c -o memory_malloc3
     #OR
@@ -119,7 +119,7 @@ Need stop manual because exist the infinity loop in the program while(1){}
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/ ; git checkout develop ; cd ..
-    cd C2/memory_malloc/
+    cd C2/src/memory_malloc/
 
     gcc -Wall -O2 memory2.c -o memory2
     #OR
