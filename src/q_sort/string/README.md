@@ -99,6 +99,7 @@ Will create a File with size of 393K with 200 words and each word was 200 caract
     cd ~
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
+    cd C2/ ; git checkout develop ; cd ..
     cd C2/src/q_sort/string/test7/
 
     cp ranstr4.h		 /usr/include
