@@ -27,7 +27,7 @@ begin:
         linked-list
         [memory_malloc] (https://github.com/pedroAkiraDanno/C2/tree/develop/src/memory_malloc)
         q_sort
-        random
+        [random] (https://github.com/pedroAkiraDanno/C2/tree/develop/src/random)
         Searching
         sort
         Sort2
