@@ -49,7 +49,7 @@ Will create a Memory with 3 GB
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/ ; git checkout develop ; cd ..
-    cd C2/srv/cpu_high_load_100%/
+    cd C2/src/cpu_high_load_100%/
 
     gcc -Wall -O2 cpu_intensive.c -o cpu_intensive
     #OR
@@ -72,7 +72,7 @@ Use malloc and realloc and show the memory address just to test
     rm -fr C2/
     git clone https://github.com/pedroAkiraDanno/C2
     cd C2/ ; git checkout develop ; cd ..
-    cd C2/srv/cpu_high_load_100%/
+    cd C2/src/cpu_high_load_100%/
 
 
     gcc -fopenmp cpu_intensive2.c  -o  cpu_intensive2
