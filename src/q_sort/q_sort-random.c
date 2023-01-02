@@ -3,7 +3,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 100
+#define MAX 100000
 void random_shuffle(int arr[])
 {
     srand(time(NULL));
@@ -65,8 +65,8 @@ int main()
     quick_sort(arr, 0, MAX-1); //function to sort the elements of array
     for (i = 0; i < MAX; i++)
          printf("%d \n", arr[i]);
-				 
-				 				 
+
+
     return 0;
 }
 
