@@ -6,11 +6,11 @@
 #include <time.h>
 
 
-#define MAX 10000000
-void random_shuffle(int arr[])
+#define MAX 1000000
+void random_shuffle(long arr[])
 {
     srand(time(NULL));
-    int i, j, temp;
+    long i, j, temp;
     for (i = MAX - 1; i > 0; i--)
     {
         j = rand()%(i + 1);
@@ -20,19 +20,19 @@ void random_shuffle(int arr[])
     }
 }
  
-void swap(int *a, int *b)
+void swap(long *a, long *b)
 {
-    int temp;
+    long temp;
     temp = *a;
     *a = *b;
     *b = temp;
 }
-int partion(int arr[], int p, int r)
+long partion(long arr[], long p, long r)
 {
-    int pivotIndex = p + rand()%(r - p + 1); //generates a random number as a pivot
-    int pivot;
-    int i = p - 1;
-    int j;
+    long pivotIndex = p + rand()%(r - p + 1); //generates a random number as a pivot
+    long pivot;
+    long i = p - 1;
+    long j;
     pivot = arr[pivotIndex];
     swap(&arr[pivotIndex], &arr[r]);
     for (j = p; j < r; j++)
@@ -48,9 +48,9 @@ int partion(int arr[], int p, int r)
     return i + 1;
 }
  
-void quick_sort(int arr[], int p, int q)
+void quick_sort(long arr[], long p, long q)
 {
-    int j;
+    long j;
     if (p < q)
     {
         j = partion(arr, p, q);
@@ -60,8 +60,8 @@ void quick_sort(int arr[], int p, int q)
 }
 int main()
 {
-    int i;
-    int arr[MAX];
+    long i;
+    long arr[MAX];
     for (i = 0; i < MAX; i++)
         arr[i] = i;
     random_shuffle(arr); //To randomize the array
