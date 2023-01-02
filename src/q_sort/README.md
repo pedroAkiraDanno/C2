@@ -125,12 +125,12 @@ Will print Unsorted Array and Sorted array in ascending order
 
     ./myquick_sort
 
-# myquick_sort2.c
+# q_sort-random.c
 
 Will use quick_sort and partition functions with C
 
 **obs:.**
-Will print Unsorted Array and Sorted array in ascending order with just 10 number control by MAX_SIZE
+Will print Unsorted Array and Sorted array in ascending order with just 100 RANDOM number control by MAX
 
 ## STEPS by STEPS on Linux Environment (completed)
 
@@ -145,11 +145,11 @@ Will print Unsorted Array and Sorted array in ascending order with just 10 numbe
 
 
 
-    gcc -Wall -O2 myquick_sort2.c -o myquick_sort2
+    gcc -Wall -O2 q_sort-random.c -o q_sort-random
     #OR
-    gcc myquick_sort2.c -o myquick_sort2
+    gcc q_sort-random.c -o q_sort-random
 
-    ./myquick_sort2
+    ./q_sort-random
 
 ---
 
