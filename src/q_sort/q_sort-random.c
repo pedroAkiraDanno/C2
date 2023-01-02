@@ -64,9 +64,9 @@ int main()
     random_shuffle(arr); //To randomize the array
     quick_sort(arr, 0, MAX-1); //function to sort the elements of array
     for (i = 0; i < MAX; i++)
-         //printf("%d \n", arr[i]);
-				 printf("Sorted array is : %d ", arr[i]);
+         printf("%d \n", arr[i]);
 				 
+				 				 
     return 0;
 }
 
