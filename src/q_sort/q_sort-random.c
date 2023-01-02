@@ -6,7 +6,7 @@
 #include <time.h>
 
 
-#define MAX 100000
+#define MAX 10000000
 void random_shuffle(int arr[])
 {
     srand(time(NULL));

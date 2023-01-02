@@ -130,7 +130,7 @@ Will print Unsorted Array and Sorted array in ascending order
 Will use quick_sort and partition functions with C
 
 **obs:.**
-Will print Sorted array in ascending order with just 100000 RANDOM number control by MAX
+Will print Sorted array in ascending order with just 1.000.000 RANDOM number control by MAX
 
 ## STEPS by STEPS on Linux Environment (completed)
 
