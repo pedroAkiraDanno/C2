@@ -26,8 +26,8 @@ begin:
         heap
         linked-list
         [memory_malloc] (https://github.com/pedroAkiraDanno/C2/tree/develop/src/memory_malloc)
-        q_sort
-        random
+        [q_sort] (https://github.com/pedroAkiraDanno/C2/tree/develop/src/q_sort)
+        [random] (https://github.com/pedroAkiraDanno/C2/tree/develop/src/random)
         Searching
         sort
         Sort2
