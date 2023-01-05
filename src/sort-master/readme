@@ -1,2 +1,5 @@
 C implementation for sorting algorithms 
 	- quick sort, heap sort, merge sort
+
+
+REFERENCE: https://github.com/cave7/sort
